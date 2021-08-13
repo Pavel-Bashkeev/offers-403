@@ -1,0 +1,11 @@
+@import '../../node_modules/reset-css/sass/reset';
+@import './blocks/classFrame';
+@import './blocks/vars';
+@import './vendor/mixins';
+@import './blocks/fonts';
+@import './blocks/global';
+
+
+@import './components/header';
+@import './components/footer';
+

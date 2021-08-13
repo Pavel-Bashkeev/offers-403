@@ -1,0 +1,118 @@
+.header {
+ 
+  .container {
+    position: relative;
+  }
+  &__container{
+    padding: 20px 0;
+  }
+}
+.header-search {
+  &__icon {
+    width: 26px;
+    height: 26px;
+  }
+  &__input{
+    border: none;
+    border-radius: 20px;
+    height: 55px;
+    width: 0;
+  }
+}
+.btn-bag {
+  &__icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+.menu {
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+  &__link {
+    color: $black;
+    font: 400 14px /16px $font;
+    transition: all .3s;
+    &.active-link {
+      text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+    }
+
+    &:hover {
+      text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+    }
+  }
+}
+
+.submenu {
+  padding-top: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  background-color: rgba($white, .7);
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  height: 0;
+  will-change: height;
+
+  &__list {
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    font: 400 14px/16px $font;
+    transition: all .2s ease-in-out;
+    letter-spacing: 0.48px;
+    &:hover {
+      text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+    }
+  }
+
+  &__title {
+    font: 700 14px/16px $font;
+    margin-bottom: 10px;
+    letter-spacing: 0.48px;
+  }
+
+  &__btn {
+    font: 400 14px/16px $font;
+    color: $black;
+    transition: all .1s;
+    padding: 0;
+
+    &.active-link {
+      text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+    }
+
+    &:hover {
+      transition: text-shadow .3s;
+      text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+    }
+  }
+}
+
+.submenu.submenu--opened {
+  opacity: 1;
+  z-index: 10;
+}
+
+.logo {
+  font: 400 30px/40px "Bree Serif";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+  color: $black;
+}
