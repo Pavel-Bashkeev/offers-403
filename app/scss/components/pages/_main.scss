@@ -1,0 +1,136 @@
+.main{
+  .hero{
+    padding: 100px 0;
+    min-height: 765px;
+    display: flex;
+    background-color: #eedecf;
+    @extend %bg-cover;
+    &__container{
+      justify-content: center;
+      width: 100%;
+    }
+    &__info{
+      color: $black;
+      margin-top: -90px;
+    }
+    &__title{
+      font: 900 40px /45px $font;
+      margin-bottom: 15px;
+      letter-spacing: 0.43px;
+    }
+    &__descr{
+      font: 400 20px/25px $font;
+      letter-spacing: 0.43px;
+      max-width: 350px;
+    }
+  }
+  // product-descr
+  .product-descr{
+    padding: 40px 0;
+    &__title{
+      max-width: 864px;
+      text-align: center;
+      font: 700 30px/37px $font;
+      margin-bottom: 50px;
+      color: $black;
+    }
+    &__link{
+      display: block;
+      width: fit-content;
+    }
+    .swiper-container{
+      margin: 0 auto 50px;
+      max-width: 670px;
+    }
+    .swiper-wrapper{
+      display: flex;
+      justify-content: space-between;
+    }
+    .swiper-slide{
+      width: 103px;
+      width: 100%;
+      &__box{
+        width: 62px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      &__img{
+        width: 62px;
+        height: 62px;
+        display: block;
+        
+      }
+      &__text{
+        white-space: nowrap;
+      }
+    }
+  }
+  // product-descr
+  //preview
+  .preview{
+    padding: 40px 0;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .preview-content{
+    &__top{
+      grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
+      grid-template-rows: 352px;
+      grid-gap: 30px 64px;
+      margin-bottom: 90px;
+    }
+    &__bottom{
+      grid-template-columns: repeat(auto-fill, minmax(510px, 1fr));
+      grid-gap: 30px 0px;
+      
+      &-left{
+        padding-right: 190px;
+      }
+      &-right{
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        background-color: #EFDDCF;
+      }
+
+    }
+    &__title{
+      font: 900 40px/55px $font;
+      letter-spacing: 0.96px;
+      margin-bottom: 18px;
+      color: $black;
+    }
+    &__descr{
+      margin-bottom: 40px;
+    }
+    &__text{
+      font: 300 16px/32px $font;
+      letter-spacing: 1.6px;
+      color: $black;
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+      &--accent{
+        font-weight: 500;
+      }
+    }
+    &__link{
+      @extend %bg-cover;
+      text-align: center;
+      &-text{
+        max-width: 356px;
+        font: 900 25px / 37px $font;
+        letter-spacing: 0.48px;
+        color: $black;
+      }
+    }
+    &__img{
+      max-width: 962px;
+    }
+  }
+  //preview
+  
+}

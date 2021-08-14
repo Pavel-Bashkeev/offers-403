@@ -25,13 +25,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	letter-spacing: 0.43px;
 }
-.main{
+
+.main {
 	flex-grow: 1;
-	background-color: #eedecf;
-}
-.footer{
-	background-color: #ffaa00;
+
 }
 
 .btn-reset {
@@ -55,4 +54,28 @@ body {
 	overflow: hidden;
 	clip: rect(0 0 0 0);
 	position: absolute;
+}
+
+.link {
+
+	&--big,
+	&--small {
+		background-color: $bg;
+		color: $white;
+		font: 700 20px/32px $font;
+		border-radius: 5px;
+		transition: all .3s;
+		display: block;
+		width: fit-content;
+		&:hover{
+			background-color: #414141;
+		}
+	}
+
+	&--big {
+		padding: 12px 70px;
+	}
+	&--small{
+		padding: 12px 25px;
+	}
 }

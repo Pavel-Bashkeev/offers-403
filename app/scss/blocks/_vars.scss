@@ -9,3 +9,14 @@ $font: 'Roboto';
 $font-default: 400 16px/22px $font;
 $font-title: 700 40px/ 47px $font;
 // Font
+
+%bg-cover{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+%bg-contain{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
