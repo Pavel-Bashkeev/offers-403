@@ -67,7 +67,8 @@ body {
 		transition: all .3s;
 		display: block;
 		width: fit-content;
-		&:hover{
+
+		&:hover {
 			background-color: #414141;
 		}
 	}
@@ -75,7 +76,172 @@ body {
 	&--big {
 		padding: 12px 70px;
 	}
-	&--small{
+
+	&--small {
 		padding: 12px 25px;
+	}
+}
+
+
+
+
+
+// общие элементы -----------------------
+// ---------------- категории и карточки товаров-------------------
+.categories {
+	padding: 12px 0 0;
+
+	&__title {
+		text-align: center;
+		font: 500 20px /37px $font;
+		letter-spacing: 1.2px;
+		color: $black;
+		text-transform: uppercase;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px 40px;
+		padding: 40px 50px 50px;
+		justify-content: center;
+	}
+
+	&__item {
+		padding: 32px 29px 44px;
+		background: #FFFFFF;
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		width: 441px;
+
+		.prod-info {
+			&__name {
+				font: 700 25px / 37px $font;
+				letter-spacing: 0.96px;
+				color: $black;
+				margin-bottom: 15px;
+			}
+
+			&__list {
+				margin-bottom: 63px;
+
+				&-item {
+					font: 400 16px / 22px $font;
+					color: #989898;
+					display: flex;
+					padding-right: 15px;
+
+					&:not(:last-child) {
+						margin-bottom: 15px;
+					}
+
+					&::before {
+						content: '';
+						padding-top: 23px;
+						margin-right: 9px;
+						width: 16px;
+						height: 16px;
+						@extend %bg-contain;
+						background-image: url('../images/dest/sprite.svg#tick');
+					}
+				}
+			}
+		}
+	}
+
+	&-box--img {
+		width: fit-content;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+		margin-bottom: 35px;
+		height: 310px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+
+		.slide__img {
+			display: block;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			z-index: -1;
+			transform: translateX(-50%);
+			width: 281px;
+			height: 281px;
+			border-radius: 50%;
+			background-color: #83D2B6;
+		}
+	}
+
+	&-box {
+		padding-top: 28px;
+		margin-top: auto;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 6px;
+			background-color: #83cbd2;
+			border-radius: 20px;
+		}
+
+		.link--small {
+			margin-left: auto;
+		}
+	}
+}
+
+// slimming
+.categories-slimming>.categories__items>.categories__item>.categories-box--img {
+	&::after {
+		background-color: #F5C934;
+	}
+}
+
+// immunity
+.categories-immunity>.categories__items>.categories__item>.categories-box--img {
+	justify-content: center;
+
+	&::after {
+		background-color: #93D4E9;
+	}
+}
+
+//mens
+.categories-men>.categories__items>.categories__item>.categories-box--img {
+	&::after {
+		background-color: #D65F57;
+	}
+}
+
+// ---------------- категории и карточки товаров-------------------
+
+.top {
+	min-height: 518px;
+	@extend %bg-cover;
+	margin-bottom: 30px;
+
+	&__container {
+		padding-top: 50px;
+		height: 100%;
+	}
+
+	&__title {
+		font: 700 30px/35px $font;
+		letter-spacing: 0.7px;
+		color: $black;
 	}
 }

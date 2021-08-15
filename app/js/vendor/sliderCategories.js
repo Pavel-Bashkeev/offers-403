@@ -13,4 +13,4 @@ const prodList = document.querySelectorAll('.prod-info__list');
 prodList.forEach(item=>{
   let heightItem = item.clientHeight;
   heightItem == 137 ? item.style.marginBottom = 63 +'px' : item.style.marginBottom = 20 + 'px';
-})
+});

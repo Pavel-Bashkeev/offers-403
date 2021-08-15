@@ -5,7 +5,7 @@
   }
 
   &__container {
-    padding: 20px 0;
+    padding: 20px 15px;
   }
 }
 
@@ -55,6 +55,7 @@
 
     &.active-link {
       text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+      pointer-events: none;
     }
 
     &:hover {
@@ -70,7 +71,7 @@
   left: 0;
   right: 0;
   z-index: -10;
-  background-color: rgba($white, .7);
+  background-color: rgba($white, .95);
   transition: all .2s ease-in-out;
   opacity: 0;
   height: 0;
