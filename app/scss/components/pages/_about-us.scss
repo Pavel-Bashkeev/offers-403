@@ -1,0 +1,148 @@
+.about-us{
+  .section-title{
+    font: 700 30px / 37px $font;
+    color: $black;
+    text-align: center;
+    margin-bottom: 17px;
+  }
+  .section-style{
+    padding: 60px 0;
+  }
+  .section-subtitle{
+    text-align: center;
+      font: 400 20px / 37px $font;
+      letter-spacing: 0.46px;
+      color: $black;
+      margin-bottom: 30px;
+  }
+  .container{
+    min-height: inherit;
+    display: flex;
+    place-items: center;
+    color: $white;
+    .top__title{
+      margin-bottom: 30px;
+      color: $white;
+    }
+    .top__subtitle{
+      text-align: center;
+      &-item{
+        display: block;
+        font: 400 20px /24px $font;
+        &:not(:last-child){
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .categories-preview{
+    &__items{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px 65px;
+      justify-content: center;
+      
+    }
+    &__item{
+      width: 260px;
+      &-icon{
+        width: 122px;
+        height: 122px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        place-items: center;
+        position: relative;
+        z-index: 2;
+        margin: -61px auto 0;
+      }
+      &-svg{
+        width:62px;
+        height: 62px;
+        display: block;
+        margin: 0 auto;
+      }
+      &-text{
+        color: $black;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .funds{
+    background-color: #F1F9FB;
+    .section-title{
+      margin-bottom: 60px;
+    }
+    &__items{
+      gap: 40px 80px;
+    }
+    &__item{
+      width: 246px;
+      &-img{
+        width: 122px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 34px;
+      }
+      &-info{
+        text-align: center;
+        color: $black;
+      }
+      &-title{
+        text-transform: uppercase;
+        font: 700 20px / 30px $font;
+      }
+      &-text{
+        font: 400 16px / 30px $font;
+      }
+    }
+  }
+  .compounds{
+    &-descr{
+      align-items: center;
+      
+      &__list-item{
+        &:not(:last-child){
+          margin-bottom: 45px;
+        }
+      }
+      &__info{
+        padding-left: 45px;
+      }
+      &__list-text{
+        color: $black;
+        font: 400 20px / 37px $font;
+        letter-spacing: .46px;
+        &--accent{
+          font: 700 25px/37px $font;
+          letter-spacing: .46px;
+          color: $black;
+        }
+      }
+
+    }
+  }
+  .way-of-life{
+    &__items{
+      gap: 40px 60px;
+    }
+    &__item{
+      width: 236px;
+      &-icon{
+        width: 65px;
+        height: 65px;
+        background-image: url('../images/dest/sprite.svg#checked');
+        @extend %bg-contain;
+        margin-bottom: 24px;
+      }
+      
+    }
+    &__text{
+      color: $black;
+      text-align: center;
+      padding: 0 15px;
+      font: 400 20px /30px $font;
+    }
+  }
+}

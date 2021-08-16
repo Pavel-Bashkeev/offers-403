@@ -1,0 +1,53 @@
+.categories {
+  .top{
+    &__container{
+      padding-top: 135px;
+    }
+  }
+  .category__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px 65px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 55px 0 85px;
+  }
+
+  .category__item {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+
+    &-icon {
+      width: 122px;
+      height: 122px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      place-items: center;
+      position: relative;
+      z-index: 2;
+      margin: -61px auto 0;
+    }
+
+    &-svg {
+      width: 62px;
+      height: 62px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    &-text {
+      color: #727272;
+      font: 400 14px/25px $font;
+      letter-spacing: .46px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    &-link{
+      width: 100%;
+      margin-top: auto;
+      text-align: center;
+    }
+  }
+}

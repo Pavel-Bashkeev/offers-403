@@ -100,7 +100,7 @@ function buildcopy() {
               'app/data/**/*',
               'app/images/dest/**/*',
               'app/fonts/**/*',
-              'app/index.html',
+              'app/**/*.html',
        ], { base: 'app' })
               .pipe(dest('dist'));
 }

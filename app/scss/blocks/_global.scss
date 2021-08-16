@@ -30,7 +30,6 @@ body {
 
 .main {
 	flex-grow: 1;
-
 }
 
 .btn-reset {
@@ -41,7 +40,10 @@ body {
 	color: inherit;
 	font: inherit;
 }
-
+.wrapper{
+	max-width: 1950px;
+	margin: 0 auto;
+}
 .container {
 	max-width: 1542px;
 	margin: 0 auto;
@@ -55,7 +57,9 @@ body {
 	clip: rect(0 0 0 0);
 	position: absolute;
 }
-
+.active-btn{
+	text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+}
 .link {
 
 	&--big,
@@ -243,5 +247,15 @@ body {
 		font: 700 30px/35px $font;
 		letter-spacing: 0.7px;
 		color: $black;
+	}
+}
+// -------------back-products-------
+.back-products{
+	background-color: $bg;
+	padding: 16px 0 20px;
+	&__link{
+		font:700 17px /19px $font;
+		color: $white;
+		letter-spacing: 0.7px;
 	}
 }
