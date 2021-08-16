@@ -17,8 +17,8 @@
 		<div class="container df justify-beetwen align-center header__container">
 			<nav class="menu">
 				<ul class="menu__list df align-center">
-					<li class="menu__item menu-second ">
-						<button class="btn-reset submenu__btn active-btn" aria-expanded="false">Categories</button> </li>
+					<li class="menu__item menu-second">
+						<button class="btn-reset submenu__btn" aria-expanded="false">Categories</button> </li>
 					<li class="menu__item">
 						<a href="all-products.html" class="menu__link">Products</a>
 					</li>
@@ -29,7 +29,7 @@
 						<a href="#" class="menu__link">Blog</a>
 					</li>
 					<li class="menu__item">
-						<a href="help-info.html" class="menu__link">Help&Info</a>
+						<a href="help-info.html" class="menu__link active-link">Help&Info</a>
 					</li>
 				</ul>
 			</nav>
@@ -94,76 +94,53 @@
 			</div>
 		</div>
 	</header>
-	<main class="joints grow">
-		<div class="back-products">
-			<div class="container back-products__container">
-				<a href="all-products.html" class="back-products__link">Back to all products</a>
+	<main class="help-info">
+		<div class="top" style="background-image: url('./images/dest/pageHelp/top-bg.jpg');">
+			<div class="container top__container df flex-column items-center">
+				<h1 class="top__title">Help&Info</h1>
 			</div>
 		</div>
-		<div class="top" style="background-image: url('./images/dest/pageJoints/top-bg.jpg');">
-			<div class="container top__container">
-				<h1 class="top__title">Joint health				</h1>
+		<section class="help-info__descr">
+			<div class="container">
+				<p class="help-info__text">
+					All our products will be delivered within 1-3 business days. The goods will be dispatched from the local
+					warehouse within 24 hours. You will get an email with confirmation of your order. After the item is delivered,
+					you’ll be able to get it in the post office.
+					If the product you’ve ordered is out of stock, we’ll give you a call and let you know when it’s going to be
+					available.
+				</p>
+				<h4 class="help-info__title">Returns</h4>
+				<p class="help-info__text">
+					You have 30 days after receiving the goods to return your order. You should write an application and specify
+					the
+					reason for the return. If we accept your application, we’ll give you all the instructions on how to send the
+					product back. If you’ve started using the product of proper quality, unfortunately, we can’t accept your
+					return.
+
+					<span class="help-info__text--accent">Please contact us immediately if you have received the wrong, defective
+						or
+						damaged item.</span>
+				</p>
+				<h4 class="help-info__title">Exchanges</h4>
+				<p class="help-info__text">
+					If you’ve ordered the wrong product, just return it without opening the package and place a new order.
+				</p>
+				<h4 class="help-info__title">Refunds</h4>
+				<p class="help-info__text">
+					We’ll contact you when we examine your item and we’ll let you know if we approve your return. If we do, the
+					money will be refunded on your original payment method.
+				</p>
 			</div>
-		</div>
-		<h1 class="joints-title">
-			Take care of your joints to maintain their strength, flexibility and mobility. Start protecting your joints while you are young and stay active until old age. 
-		</h1>
-		<div class="categories categories-join">
 			
-			<div class="categories__items">
-				<div class="categories__item">
-					<div class="categories-box--img">
-						<img class="categories__img" src="./images/dest/mainPage/products/join/item-1.png" alt="">
-					</div>
-					<div class="prod-info">
-						<h4 class="prod-info__name">Fortuflex caps</h4>
-						<ul class="prod-info__list">
-							<li class="prod-info__list-item">Eliminate pain</li>
-							<li class="prod-info__list-item">Improve joint metabolism</li>
-							<li class="prod-info__list-item">Restore the bone and cartilage tissue</li>
-							<li class="prod-info__list-item">Restore joint function</li>
-						</ul>
-					</div>
-					<div class="categories-box">
-						<a href="fortuflex-caps.html" class="link--small">Show more</a>
-					</div>
-				</div>
-				<div class="categories__item">
-					<div class="categories-box--img">
-						<img class="categories__img" src="./images/dest/mainPage/products/join/item-2.png" alt="">
-					</div>
-					<div class="prod-info">
-						<h4 class="prod-info__name">Fortuflex balm</h4>
-						<ul class="prod-info__list">
-							<li class="prod-info__list-item">Releases join pain</li>
-							<li class="prod-info__list-item">Eliminates inflammation</li>
-							<li class="prod-info__list-item">Relieves muscle tension and spasms</li>
-							<li class="prod-info__list-item">Has double cooling and warming effect</li>
-						</ul>
-					</div>
-					<div class="categories-box">
-						<a href="#" class="link--small">Show more</a>
-					</div>
-				</div>
-				<div class="categories__item">
-					<div class="categories-box--img">
-						<img class="categories__img" src="./images/dest/mainPage/products/join/item-3.png" alt="">
-					</div>
-					<div class="prod-info">
-						<h4 class="prod-info__name">Fortuflex patches</h4>
-						<ul class="prod-info__list">
-							<li class="prod-info__list-item">Eliminate aches in the joints</li>
-							<li class="prod-info__list-item">Have anti-edema and anti-inflammatory effects</li>
-							<li class="prod-info__list-item">Stimulate blood circulation in the affected joint area</li>
-							<li class="prod-info__list-item">Restore the motor activity of the joint</li>
-						</ul>
-					</div>
-					<div class="categories-box">
-						<a href="#" class="link--small">Show more</a>
-					</div>
-				</div>
-			</div>
-		</div>
+			<form class="form" method="post" id="form">
+				<h5 class="form__title">Contact us</h5>
+				<input name="email" type="email" required="" placeholder="e-mail">
+				<span class="input-choice">or</span>
+				<input name="phone" type="tel" required="" placeholder="phone number">
+				<textarea name="message" placeholder="Request"></textarea>
+				<button class="button" type="submit">Send</button>
+			</form>
+		</section>
 	</main>
 	<footer class="footer">
 		<div class="container footer__container">
