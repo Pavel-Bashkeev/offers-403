@@ -46,6 +46,7 @@
   border-bottom-right-radius: 10px;
   transition: opacity .3s;
   opacity: 1;
+  z-index: 10;
 
   &__item {
     align-items: center;
@@ -145,6 +146,35 @@
     color: $black;
     transition: all .1s;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-flag{
+      display: block;
+      width: 18px;
+      height: 18px;
+      margin-left: 10px;
+      position: relative;
+      &::before,&::after{
+        content: '';
+        position: absolute;
+        background-color: #fff;
+      }
+      &::before{
+        width: 100%;
+        top:50%;
+        transform: translateY(-50%);
+        left:0;
+        height: 3px;
+      }
+      &::after{
+        width: 3px;
+        height: 100%;
+        left:50%;
+        transform: translateX(-50%);
+        top:0;
+      }
+    }
 
     &.active-link {
       text-shadow: 0 0 .65px #333, 0 0 .65px #333;
@@ -167,7 +197,83 @@
   color: $black;
 }
 
+.burger-menu {
+  width: 39px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+
+  &__line {
+    width: 100%;
+    height: 3px;
+    background-color: $black;
+  }
+}
+
+.burger-menu.burger-menu--visible {
+  .burger-menu__line {
+    background-color: #fff;
+  }
+}
+
 .submenu.submenu--opened {
   opacity: 1;
   z-index: 10;
+}
+
+.menu.menu--visible {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: $black;
+  max-width: 320px;
+  width: 100%;
+  height: 100vh;
+  padding-left: 15px;
+  
+
+  .menu__list {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 75px 0 88px;
+
+    .menu__item {
+      border-top: 1px solid #2B2B2B;
+
+      &:last-child {
+        border-bottom: 1px solid #2B2B2B;
+      }
+
+      width: 100%;
+
+      .submenu__btn {
+        color: $white;
+        padding: 20px 0px;
+        width: 100%;
+    padding-right: 15px;
+      }
+
+      .menu__link {
+        padding: 20px 0px;
+        color: $white;
+        display: block;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1100px) {
+  .menu {
+    display: none;
+  }
+
+  .header__actions {
+    margin-left: auto;
+  }
 }
