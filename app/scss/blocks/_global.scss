@@ -58,6 +58,7 @@ body {
 	overflow: hidden;
 	clip: rect(0 0 0 0);
 	position: absolute;
+	transition: opacity 1.3s;
 }
 
 .active-btn {
@@ -280,6 +281,7 @@ body {
 	}
 
 	&__top {
+		justify-content: flex-start;
 		&-info {
 			width: 50%;
 		}
@@ -291,16 +293,19 @@ body {
 		}
 
 		&-right {
-			max-width: 956px;
-			width: 100%;
+			width: 50%;
 		}
 	}
 
 	&__bottom {
 		background-color: #83D2B6;
-
+		justify-content: flex-end;
+		&-right{
+			width: 50%;
+		}
 		&-info {
-			width: 50.9%;
+			width: 50%;
+			padding: 20px 0;
 		}
 
 		&-inner {
@@ -433,6 +438,40 @@ body {
 			&__description {
 				.about-product__bottom {
 					background-color: #93D4E9;
+				}
+			}
+		}
+	}
+}
+.one-product.men-category {
+	.top {
+		background-color: #D65F57;
+		color: $white;
+		&__title{
+			color:$white;
+		}
+		&-decor {
+			color: #CD4B42;
+		}
+
+		&-decor--img {
+			bottom: -40px;
+		}
+	}
+
+	.wrapper {
+		.about-product {
+			&__description {
+				.about-product__bottom {
+					background-color: #D65F57;
+					&-inner{
+						.about-product__description-title{
+							color: $white;
+						}
+						.about-product__description-text{
+							color: $white;
+						}
+					}
 				}
 			}
 		}

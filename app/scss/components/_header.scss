@@ -1,11 +1,12 @@
 .header {
-
-  .container {
-    position: relative;
-  }
+  position: relative;
 
   &__container {
     padding: 20px 15px;
+  }
+
+  &__actions {
+    position: relative;
   }
 }
 
@@ -25,6 +26,7 @@
     width: 0;
     transition: width .3s;
     border-radius: 5px;
+    text-transform: lowercase;
 
     &--visible {
       width: 150px;
@@ -33,12 +35,44 @@
   }
 }
 
-.btn-bag {
-  &__icon {
-    width: 26px;
-    height: 26px;
-    margin-right: 12px;
+.search-elements {
+  position: absolute;
+  width: 300px;
+  top: 0;
+  right: 0;
+  background-color: rgba($white, .95);
+  padding: 10px 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: opacity .3s;
+  opacity: 1;
+
+  &__item {
+    align-items: center;
+    transition: all .3s;
+
+    &:hover {
+      color: $black;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &-img {
+      width: 30px;
+      margin-right: 20px;
+    }
+
+    &-name {
+      text-transform: lowercase;
+    }
   }
+}
+
+.search-elements.hide {
+  transition: all .2s;
+  opacity: 0;
 }
 
 .menu {
@@ -103,7 +137,7 @@
     font: 700 14px/16px $font;
     margin-bottom: 20px;
     letter-spacing: 0.48px;
-    display:block;
+    display: block;
   }
 
   &__btn {
