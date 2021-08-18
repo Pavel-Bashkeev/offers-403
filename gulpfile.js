@@ -1,6 +1,12 @@
 let preprocessor = 'scss';
 
-const { src, dest, parallel, series, watch } = require('gulp');
+const {
+       src,
+       dest,
+       parallel,
+       series,
+       watch
+} = require('gulp');
 const browserSync = require('browser-sync').create();
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
@@ -13,15 +19,16 @@ const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const cleanCss = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
-const webpConv = require('gulp-webp');
+const pngimagemin = require('imagemin-pngquant');
+// const webpConv = require('gulp-webp');
 const newer = require('gulp-newer');
 const del = require('del');
 const sprite = require('gulp-svg-sprite');
 
 function styles() {
        return src([
-              'app/' + preprocessor + '/main.' + preprocessor + '',
-       ])
+                     'app/' + preprocessor + '/main.' + preprocessor + '',
+              ])
               .pipe(eval(preprocessor)())
               .pipe(concat('style.min.css'))
               .pipe(autoprefixer({
@@ -38,11 +45,12 @@ function styles() {
               .pipe(dest('app/css/'))
               .pipe(browserSync.stream())
 }
+
 function scripts() {
        return src([
-              './node_modules/smoothscroll-polyfill/dist/smoothscroll.js',
-              './app/js/vendor/**/*.js'
-       ])
+                     './node_modules/smoothscroll-polyfill/dist/smoothscroll.js',
+                     './app/js/vendor/**/*.js'
+              ])
               .pipe(babel({
                      presets: ['@babel/env']
               }))
@@ -51,13 +59,23 @@ function scripts() {
               .pipe(dest('app/js/'))
               .pipe(browserSync.stream())
 }
+
 function images() {
        return src('./app/images/src/**/*.+(png|jpg|jpeg)')
               .pipe(newer('app/images/dest/'))
-              .pipe(imagemin())
+              .pipe(imagemin([
+                     imagemin.mozjpeg({
+                            quality: 95,
+                            progressive: true
+                     }),
+                     imagemin.optipng({
+                            optimizationLevel: 2
+                     }),
+              ]))
               // .pipe(webpConv())
               .pipe(dest('app/images/dest/'))
 }
+
 function imagesSvgSprite() {
        return src('./app/images/dest/icons/**/*.svg')
               .pipe(sprite({
@@ -81,29 +99,41 @@ function fonts() {
 // Работа со шрифтами
 function browsersync() {
        browserSync.init({
-              server: { baseDir: 'app/' },
+              server: {
+                     baseDir: 'app/'
+              },
               notify: false,
               //  notify: false убирает уведомление 
               online: true
        });
 }
+
 function cleanimg() {
-       return del('app/images/dest/**/*', { force: true })
+       return del('app/images/dest/**/*', {
+              force: true
+       })
 }
+
 function cleandist() {
-       return del('dist/**/*', { force: true })
+       return del('dist/**/*', {
+              force: true
+       })
 }
+
 function buildcopy() {
        return src([
-              'app/css/**/*.min.css',
-              'app/js/*.min.js',
-              'app/data/**/*',
-              'app/images/dest/**/*',
-              'app/fonts/**/*',
-              'app/**/*.html',
-       ], { base: 'app' })
+                     'app/css/**/*.min.css',
+                     'app/js/*.min.js',
+                     'app/data/**/*',
+                     'app/images/dest/**/*',
+                     'app/fonts/**/*',
+                     'app/**/*.html',
+              ], {
+                     base: 'app'
+              })
               .pipe(dest('dist'));
 }
+
 function startwatch() {
        watch('app/**/' + preprocessor + '/**/*', styles);
        watch(['app/**/*js', '!app/**/*.min.js'], scripts);

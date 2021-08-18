@@ -113,7 +113,7 @@ body {
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 20px 40px;
-		padding: 40px 50px 50px;
+		padding: 58px 50px 50px;
 		justify-content: center;
 	}
 
@@ -129,19 +129,19 @@ body {
 		.prod-info {
 			&__name {
 				font: 700 25px / 37px $font;
-				letter-spacing: 0.96px;
+				letter-spacing: 1.26px;
 				color: $black;
-				margin-bottom: 15px;
+				margin-bottom: 11px;
 			}
 
 			&__list {
-				margin-bottom: 63px;
+				margin-bottom: 70px;
 
 				&-item {
 					font: 400 16px / 22px $font;
 					color: #989898;
 					display: flex;
-					padding-right: 15px;
+					padding-right: 13px;
 
 					&:not(:last-child) {
 						margin-bottom: 15px;
@@ -171,7 +171,11 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: center;
+		img{
+			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		}
+		
 
 		.slide__img {
 			display: block;
@@ -192,7 +196,7 @@ body {
 	}
 
 	&-box {
-		padding-top: 28px;
+		padding-top: 34px;
 		margin-top: auto;
 		position: relative;
 
@@ -235,13 +239,31 @@ body {
 		background-color: #D65F57;
 	}
 }
+// muscules
 
+.categories-muscles>.categories__items>.categories__item>.categories-box--img {
+	&::after {
+		background-color: #D65F57;
+	}
+}
 // ---------------- категории и карточки товаров-------------------
 
 .top {
 	min-height: 518px;
 	@extend %bg-cover;
 	margin-bottom: 30px;
+	position: relative;
+	z-index: 1;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	&::before{
+		content: '';
+		position: absolute;
+		top:0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+	}
 
 	&__container {
 		padding-top: 50px;
@@ -249,9 +271,10 @@ body {
 	}
 
 	&__title {
-		font: 700 30px/35px $font;
+		font: 700 40px/45px $font;
 		letter-spacing: 0.7px;
 		color: $black;
+		text-align: center;
 	}
 }
 
@@ -278,6 +301,7 @@ body {
 		letter-spacing: 1.2px;
 		margin-bottom: 64px;
 		color: $black;
+		
 	}
 
 	&__top {
@@ -378,6 +402,7 @@ body {
 
 			img {
 				display: block;
+				
 			}
 		}
 

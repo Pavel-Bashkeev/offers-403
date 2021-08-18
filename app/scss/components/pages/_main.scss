@@ -13,32 +13,33 @@
 
     &__info {
       color: $black;
-      margin-top: -90px;
+      margin-top: -150px;
     }
 
     &__title {
       font: 900 40px /45px $font;
-      margin-bottom: 15px;
-      letter-spacing: 0.43px;
+      margin-bottom: 10px;
+      letter-spacing: 1.2px;
     }
 
     &__descr {
-      font: 400 20px/25px $font;
-      letter-spacing: 0.43px;
+      font: 400 20px/34px Roboto;
+      letter-spacing: .43px;
       max-width: 350px;
     }
   }
 
   // product-descr
   .product-descr {
-    padding: 40px 0;
+    padding: 31px 0;
 
     &__title {
-      max-width: 864px;
+      max-width: 890px;
       text-align: center;
-      font: 700 30px/37px $font;
+      font: 700 30px/37px Roboto;
       margin-bottom: 50px;
-      color: $black;
+      color: #000;
+      letter-spacing: 0.95px;
     }
 
     &__link {
@@ -85,7 +86,7 @@
   // product-descr
   //preview
   .preview {
-    padding: 40px 0;
+    padding: 10px 0 40px;
     position: relative;
     overflow-x: hidden;
   }
@@ -93,9 +94,9 @@
   .preview-content {
     &__top {
       grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
-      grid-template-rows: 352px;
+      grid-template-rows: 380px;
       grid-gap: 30px 64px;
-      margin-bottom: 90px;
+      margin-bottom: 99px;
     }
 
     &__bottom {
@@ -117,22 +118,22 @@
 
     &__title {
       font: 900 40px/55px $font;
-      letter-spacing: 0.96px;
+      letter-spacing: 2.3px;
       margin-bottom: 18px;
       color: $black;
     }
 
     &__descr {
-      margin-bottom: 40px;
+      margin-bottom: 31px;
     }
 
     &__text {
-      font: 300 16px/32px $font;
+      font: 300 16px/34px $font;
       letter-spacing: 1.6px;
       color: $black;
 
       &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
 
       &--accent {
@@ -145,10 +146,17 @@
       text-align: center;
 
       &-text {
-        max-width: 356px;
+        max-width: 350px;
         font: 900 25px / 37px $font;
         letter-spacing: 0.48px;
         color: $black;
+      }
+
+      &-more {
+        max-width: 323px;
+        width: 100%;
+        display: block;
+        text-align: center;
       }
     }
 
@@ -161,11 +169,11 @@
 
   // slider-categories
   .slider-categories {
-    padding: 20px 0;
+    padding: 31px 0 50px;
   }
 
-  
-  .slider-categories__container>.swiper-container>.slide-btn{
+
+  .slider-categories__container>.swiper-container>.slide-btn {
     width: 59px;
     height: 59px;
     border-radius: 50%;
@@ -175,112 +183,142 @@
     top: 0;
     z-index: 10;
   }
-  .slider-categories__container>.swiper-container>.slide-btn-prev{
+
+  .slider-categories__container>.swiper-container>.slide-btn-prev {
     @extend %bg-contain;
     background-size: 50%;
     background-image: url('../images/dest/sprite.svg#prevArrow');
     left: 0;
   }
-  .slider-categories__container>.swiper-container>.slide-btn-next{
+
+  .slider-categories__container>.swiper-container>.slide-btn-next {
     @extend %bg-contain;
     background-size: 50%;
     background-image: url('../images/dest/sprite.svg#nextArrow');
     right: 0;
   }
+
   // slider-categories
 
   // about-more-product
-  .about-more-products{
+  .about-more-products {
     color: $black;
-    &__top{
+
+    &__top {
       position: relative;
       z-index: 1;
-      &::before{
+
+      &::before {
         content: '';
         position: absolute;
-        top:0;
+        top: 0;
         left: 0;
         width: 70%;
         height: 100%;
-      background-color: #F7E9DE;
-      z-index: -1;
+        background-color: #F7E9DE;
+        z-index: -1;
       }
-      &-left{
-        padding: 86px 67px 67px 0px;
+
+      &-left {
+        padding: 90px 57px 67px 0px;
         flex-grow: 1;
       }
-      &-inner{
-        max-width: 746px;
+
+      &-inner {
+        max-width: 755px;
         margin-left: auto;
       }
-      &-right{
+
+      &-right {
         max-width: 895px;
         width: 100%;
       }
-      &-img{
+
+      &-img {
         display: block;
       }
     }
-    &__title{
+
+    &__title {
       font: 900 40px / 55px $font;
-      letter-spacing: 0.96px;
+      letter-spacing: 2.4px;
       color: $black;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       max-width: 562px;
     }
-    &__info{
-      margin-bottom: 36px;
-    }
-    &__text{
-      font-weight: 500;
-      line-height: 34px;
-      letter-spacing: 1.2px;
-      color: $black;
-    }
-    &__list{
-      counter-reset: item;
-      &-item{  
-        letter-spacing: 1.2px;     
-        &:not(:last-child){
-          margin-bottom: 15px;
-        }
-      }
-      &-title{
-        font: 700 20px / 24px $font;
-        margin-bottom: 15px;
-        
-        &::before{
-          counter-increment: item;
-          content: counter(item) '.';
-          margin-right: 10px;
-        }
-      }
+
+    &__info {
+      margin-bottom: 45px;
+      margin-top: 34px;
     }
 
-    &__bottom{
-            align-items: stretch;
-      &-left{
+    &__text {
+      font-weight: 500;
+      line-height: 34px;
+      letter-spacing: 1.6px;
+      color: $black;
+    }
+
+    &__list {
+      counter-reset: item;
+
+      &-item {
+        letter-spacing: 1.2px;
+
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+
+      &-title {
+        font: 700 20px/22px Roboto;
+    margin-bottom: 7px;
+    letter-spacing: 1.9px;
+
+        &::before {
+          counter-increment: item;
+          content: counter(item) '.';
+          margin-right: 15px;
+        }
+      }
+
+      &-text {
+        letter-spacing: 1.7px;
+        line-height: 34px;
+      }
+
+    }
+
+    &__bottom {
+      align-items: stretch;
+
+      &-left {
         max-width: 50%;
         width: 100%;
         flex-grow: 1;
       }
-      &-box{
+
+      &-box {
         max-width: 756px;
         margin-left: auto;
       }
-      &-img{
+
+      &-img {
         display: block;
       }
-      &-right{
+
+      &-right {
         width: 50%;
-        padding:72px 0 88px 67px;
-        .about-more-products__text{
+        padding: 72px 0 80px 67px;
+
+        .about-more-products__text {
           max-width: 548px;
           font-weight: 300;
         }
       }
     }
   }
+
   // about-more-product
 }
 

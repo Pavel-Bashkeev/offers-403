@@ -27,6 +27,9 @@
     transition: width .3s;
     border-radius: 5px;
     text-transform: lowercase;
+    &::first-letter{
+      text-transform: uppercase;
+    }
 
     &--visible {
       width: 150px;
@@ -200,7 +203,7 @@
 .burger-menu {
   width: 39px;
   height: 22px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -214,6 +217,7 @@
 }
 
 .burger-menu.burger-menu--visible {
+  display: flex;
   .burger-menu__line {
     background-color: #fff;
   }

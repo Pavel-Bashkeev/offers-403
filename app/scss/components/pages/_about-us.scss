@@ -4,9 +4,10 @@
     color: $black;
     text-align: center;
     margin-bottom: 17px;
+    letter-spacing: 0.03px;
   }
   .section-style{
-    padding: 60px 0;
+    padding: 41px 0 58px;
   }
   .section-subtitle{
     text-align: center;
@@ -14,18 +15,24 @@
       letter-spacing: 0.46px;
       color: $black;
       margin-bottom: 30px;
+      letter-spacing: -0.55px;
   }
   .container{
     min-height: inherit;
     display: flex;
-    place-items: center;
+    align-items: center;
+    justify-content: center;
     color: $white;
     .top__title{
       margin-bottom: 30px;
       color: $white;
+      font: 700 25px/30px Roboto;
+    margin-top: 31px;
+    letter-spacing: 0.05px;
     }
     .top__subtitle{
       text-align: center;
+      letter-spacing: 0.12px;
       &-item{
         display: block;
         font: 400 20px /24px $font;
@@ -54,7 +61,7 @@
         place-items: center;
         position: relative;
         z-index: 2;
-        margin: -61px auto 0;
+        margin: -79px auto 0;
       }
       &-svg{
         width:62px;
@@ -71,8 +78,9 @@
   }
   .funds{
     background-color: #F1F9FB;
+    padding-top: 67px;
     .section-title{
-      margin-bottom: 60px;
+      margin-bottom: 69px;
     }
     &__items{
       gap: 40px 80px;
@@ -83,7 +91,7 @@
         width: 122px;
         display: block;
         margin: 0 auto;
-        margin-bottom: 34px;
+        margin-bottom: 39px;
       }
       &-info{
         text-align: center;
@@ -95,13 +103,17 @@
       }
       &-text{
         font: 400 16px / 30px $font;
+        letter-spacing: 0.05px;
       }
     }
   }
   .compounds{
+    padding: 66px 0;
     &-descr{
       align-items: center;
-      
+      &__list{
+        margin: 4px 0 0;
+      }
       &__list-item{
         &:not(:last-child){
           margin-bottom: 45px;
@@ -113,10 +125,10 @@
       &__list-text{
         color: $black;
         font: 400 20px / 37px $font;
-        letter-spacing: .46px;
+        letter-spacing: .6px;
         &--accent{
           font: 700 25px/37px $font;
-          letter-spacing: .46px;
+          letter-spacing: .6px;
           color: $black;
         }
       }
@@ -124,6 +136,10 @@
     }
   }
   .way-of-life{
+    padding: 0px 0px 79px;
+    &__subtitle{
+      margin-bottom: 64px;
+    }
     &__items{
       gap: 40px 60px;
     }
