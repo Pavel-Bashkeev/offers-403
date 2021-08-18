@@ -26,6 +26,20 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	letter-spacing: 0.43px;
+	
+}
+body.hidden{
+	z-index: 1;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color: rgba($black, .6);
+    z-index: 1;
+  }
 }
 
 .main {
@@ -293,12 +307,12 @@ body {
 // ----------------about-product-----------------
 .about-product {
 	.container {
-		padding-top: 100px;
+		padding-top: 95px;
 	}
 
 	&__title {
 		font: 700 20px / 32px $font;
-		letter-spacing: 1.2px;
+		letter-spacing: 1.91px;
 		margin-bottom: 64px;
 		color: $black;
 		
@@ -306,6 +320,8 @@ body {
 
 	&__top {
 		justify-content: flex-start;
+		align-items: flex-start;
+		padding-top: 10px;
 		&-info {
 			width: 50%;
 		}
@@ -314,6 +330,7 @@ body {
 			max-width: 756px;
 			margin-left: auto;
 			color: $black;
+			padding-top: 10px;
 		}
 
 		&-right {
@@ -343,14 +360,14 @@ body {
 
 	&__description {
 		&-title {
-			margin-bottom: 30px;
+			margin-bottom: 40px;
 			font: 900 25px / 29px $font;
 		}
 
 		&-text {
 			font: 400 16px / 34px $font;
 			margin-bottom: 30px;
-			letter-spacing: 1.2px;
+			letter-spacing: 1.6px;
 			padding-right: 50px;
 
 			&--accent {
@@ -368,9 +385,9 @@ body {
 
 		&__container {
 			position: relative;
-			min-height: inherit;
-			padding-top: 70px;
-			padding-bottom: 40px;
+    min-height: inherit;
+    padding-top: 56px;
+    padding-bottom: 40px;
 		}
 
 		&__info {
@@ -382,12 +399,14 @@ body {
 		&__title {
 			font: 900 30px / 35px $font;
 			letter-spacing: 0.48px;
-			margin-bottom: 30px;
+			margin-bottom: 36px;
+			text-align: left;
 		}
 
 		&__subtitle {
 			font: 400 16px /34px $font;
-			letter-spacing: 1.2px;
+			letter-spacing: 1.6px;
+			color: $black;
 		}
 
 		&-decor--img {
@@ -497,6 +516,29 @@ body {
 							color: $white;
 						}
 					}
+				}
+			}
+		}
+	}
+}
+.one-product.muscles-category {
+	.top {
+		background-color: #9C7CB5;
+
+		&-decor {
+			color: #7B5A95;
+		}
+
+		&-decor--img {
+			bottom: -40px;
+		}
+	}
+
+	.wrapper {
+		.about-product {
+			&__description {
+				.about-product__bottom {
+					background-color: #9C7CB5;
 				}
 			}
 		}

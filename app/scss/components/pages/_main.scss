@@ -272,8 +272,8 @@
 
       &-title {
         font: 700 20px/22px Roboto;
-    margin-bottom: 7px;
-    letter-spacing: 1.9px;
+        margin-bottom: 7px;
+        letter-spacing: 1.9px;
 
         &::before {
           counter-increment: item;
@@ -323,3 +323,145 @@
 }
 
 // 
+@media(max-width: 1710px) {
+  .main {
+    .about-more-products {
+
+      &__top {}
+
+      &-left {}
+
+      &-inner {}
+
+      &-right {
+        max-width: 50%;
+        width: 100%;
+      }
+
+      &-img {}
+    }
+  }
+}
+@media(max-width: 1650px){
+  .main{
+    .about-more-products {
+
+      &__top {
+        padding-left: 15px;
+        padding-right: 15px;
+        &::before{
+          width: 100%;
+        }
+        &-right{
+          display: none;
+        }
+        &-inner{
+          max-width: 100%;
+        }
+      }
+      &__title{
+        max-width: 100%;
+      }
+      &__bottom{
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media(max-width: 1366px) {
+  .main {
+    .preview-content {
+      &__top {}
+
+      &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px 0;
+
+        &-left {
+          padding-right: 25px;
+          width: 100%;
+        }
+
+        &-right {
+          position: static;
+          width: fit-content;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+      }
+
+      &__title {}
+
+      &__descr {}
+
+      &__text {}
+
+      &__link {}
+
+      &__img {}
+    }
+    .about-more-products{
+      &__bottom{
+        flex-direction: column;
+        &-left{
+          order: 2;
+        }
+        &-right{
+          width: 100%;
+          padding: 30px 15px 40px;
+          .about-more-products__text{
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .main {
+    .preview-content {
+      &__top {}
+
+      &__bottom {
+
+        &-left {}
+
+        &-right {}
+
+      }
+
+      &__title {
+        font: 900 30px/40px Roboto;
+      }
+
+      &__descr {}
+
+      &__text {
+        font: 300 16px/20px Roboto;
+
+        &--accent {
+          font-weight: 700;
+        }
+      }
+
+      &__link {}
+
+      &__img {}
+    }
+  }
+
+  .main>.wrapper>.preview>.container>.preview-content>.preview-content__top {
+    grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
+    grid-template-rows: repeat(auto-fit, 250px);
+    grid-gap: 30px 64px;
+    margin-bottom: 99px;
+  }
+
+  .main>.wrapper>.preview>.container>.preview-content>.preview-content__top>.preview-content__link {
+    min-height: 250px;
+  }
+}

@@ -1,5 +1,6 @@
   let btnSubmenu = document.querySelector('.submenu__btn');
   let submenu = document.querySelector('.submenu');
+  const menuMob = document.querySelector('.menu');
 
   const openedSubmenu =(event) => {
     btnSubmenu.classList.toggle('active-link');
@@ -10,7 +11,7 @@
     // Деллигирование события
     let target = event.target; //определяет по какому элементу был клик
     let itMenu = target == submenu || submenu.contains(target); // если target равен самому меню или|| элементу находящийся в нутри меню то вернется TRUE
-    let itsBtnSubmenu = target == btnSubmenu; //если target равен кнопки открывающая меню то вернется TRUE
+    let itsBtnSubmenu = target == btnSubmenu || btnSubmenu.contains(target); //если target равен кнопки открывающая меню то вернется TRUE
     let menuIsOpened = submenu.classList.contains('submenu--opened');// Если меню содержит класс "submenu--opened" то вернется TRUE
     itsBtnSubmenu ? openedSubmenu() : '';
     !itMenu && !itsBtnSubmenu && menuIsOpened ? closeSubmenu() : '';
@@ -24,9 +25,14 @@
   }
   function findHeight() {
     if (submenu.classList.contains('submenu--opened')) {
+      if(menuMob.classList.contains('menu--visible')){
+        submenu.style.height = (submenu.scrollHeight + 60) + 'px';
+      }else{
+        submenu.style.height = submenu.scrollHeight + submenu.offsetTop + 'px';
+      }
       btnSubmenu.setAttribute('aria-expanded', true);
       submenu.setAttribute('aria-hidden', false);
-      submenu.style.height = submenu.scrollHeight + submenu.offsetTop + 'px';
+      
     } else {
       btnSubmenu.setAttribute('aria-expanded', false);
       submenu.setAttribute('aria-hidden', true);

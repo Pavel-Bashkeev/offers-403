@@ -1,0 +1,31 @@
+.one-product.slimming-category.fortunella-caps {
+  .top {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &-decor--img {
+      bottom: -81px;
+      left: 51.2%;
+      width: 335px;
+    }
+  }
+
+  .wrapper {
+    .about-product {
+      .about-product__description {
+        .about-product__top {
+          padding-top: 48px;
+
+          .about-product__top-info {
+            .about-product__top-inner {
+              .about-product__description-text {
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

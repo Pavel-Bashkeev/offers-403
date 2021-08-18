@@ -27,7 +27,8 @@
     transition: width .3s;
     border-radius: 5px;
     text-transform: lowercase;
-    &::first-letter{
+
+    &::first-letter {
       text-transform: uppercase;
     }
 
@@ -152,30 +153,35 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &-flag{
+
+    &-flag {
       display: block;
       width: 18px;
       height: 18px;
       margin-left: 10px;
       position: relative;
-      &::before,&::after{
+
+      &::before,
+      &::after {
         content: '';
         position: absolute;
         background-color: #fff;
       }
-      &::before{
+
+      &::before {
         width: 100%;
-        top:50%;
+        top: 50%;
         transform: translateY(-50%);
-        left:0;
+        left: 0;
         height: 3px;
       }
-      &::after{
+
+      &::after {
         width: 3px;
         height: 100%;
-        left:50%;
+        left: 50%;
         transform: translateX(-50%);
-        top:0;
+        top: 0;
       }
     }
 
@@ -208,18 +214,39 @@
   justify-content: space-between;
   position: relative;
   z-index: 10;
+  transition: all .3s;
+  display: none;
 
   &__line {
     width: 100%;
     height: 3px;
     background-color: $black;
+    transition: all .3s;
+    background-color: $black;
+    opacity: 1;
   }
 }
 
+
 .burger-menu.burger-menu--visible {
-  display: flex;
+  left: -16px;
+  transition: all .3s;
+
   .burger-menu__line {
-    background-color: #fff;
+    background-color: $white;
+    transition: all .3s;
+
+    &:nth-child(1) {
+      transform: rotate(45deg) translateX(15px) translateY(-2px);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg) translateX(15px) translateY(2px);
+    }
   }
 }
 
@@ -230,15 +257,18 @@
 
 .menu.menu--visible {
   display: block;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
+  transform: translateX(0);
   background-color: $black;
   max-width: 320px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-left: 15px;
-  
+  transition: all .3s;
+  z-index: 2;
+  overflow-y: scroll;
 
   .menu__list {
     flex-direction: column;
@@ -248,18 +278,19 @@
 
     .menu__item {
       border-top: 1px solid #2B2B2B;
+      width: 100%;
 
       &:last-child {
         border-bottom: 1px solid #2B2B2B;
+        margin-bottom: 30px;
       }
-
-      width: 100%;
 
       .submenu__btn {
         color: $white;
         padding: 20px 0px;
         width: 100%;
-    padding-right: 15px;
+        padding-right: 15px;
+        border-bottom: 1px solid #2B2B2B;
       }
 
       .menu__link {
@@ -267,17 +298,86 @@
         color: $white;
         display: block;
       }
+
+      .submenu {
+        position: static;
+        padding-top: 0;
+        background-color: $black;
+        color: $white;
+        z-index: -100;
+        transform: translateX(-200%);
+        transition: all .3s;
+
+        .container {
+          display: block;
+          padding: 0;
+
+          .submenu__list {
+            &:not(:last-child) {
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+
+      .submenu.submenu--opened {
+        transition: all .3s;
+        padding: 30px 0;
+        z-index: 1;
+        transform: translateX(0%);
+      }
     }
   }
 
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
   .menu {
-    display: none;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-200%);
+    background-color: $black;
+    max-width: 320px;
+    width: 100%;
+    height: 100vh;
+    padding-left: 15px;
+    transition: all .3s;
+
+    &__list {
+      display: block;
+      padding: 75px 0 88px;
+    }
   }
 
   .header__actions {
     margin-left: auto;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .search-elements {
+    padding-top: 50px;
+    right: 20px;
+  }
+
+  .header-search__input {
+    position: absolute;
+  }
+
+  .header-search__input--visible {
+    position: absolute;
+    bottom: -55px;
+    right: 20px;
+    z-index: 11;
+    width: 300px;
+  }
+
+  .header-search__btn {
+    position: relative;
+    z-index: 14;
   }
 }
