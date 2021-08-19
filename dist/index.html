@@ -4,21 +4,34 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Premium Formulations For Your Specific Health Goals">
-	<meta name="keywords" content=" ">
+	<meta property="og:title" content="FORTUFLEX - Joint cream with fortunella" />
+	<meta property="og:description"
+		content="Our all-natural products are designed to support your health and prolong your youth and vitality" />
+	<meta property="og:image" content="https://i.imgur.com/eYV34jf.png" />
+	<meta property="og:type" content="website" />
+
+	<link rel="shortcut icon" href="images/dest/favicon.png" type="image/png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/swiper.min.css">
 	<link rel="stylesheet" href="./css/style.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<title>Duonature</title>
 </head>
 
 <body>
 	<header class="header">
 		<div class="container df justify-beetwen align-center header__container">
-			<nav class="menu">
+			<div class="burger-menu ">
+				<span class="burger-menu__line"></span>
+				<span class="burger-menu__line"></span>
+				<span class="burger-menu__line"></span>
+			</div>
+			<!-- menu--visible burger-menu--visible -->
+			<nav class="menu ">
 				<ul class="menu__list df align-center">
 					<li class="menu__item menu-second">
-						<button class="btn-reset submenu__btn" aria-expanded="false">Categories</button>
+						<button class="btn-reset submenu__btn" aria-expanded="false">Categories <span
+								class="submenu__btn-flag"></span></button>
 						<div class="submenu" aria-hidden='true'>
 							<div class="container  df">
 								<ul class="submenu__list">
@@ -58,6 +71,12 @@
 									<a href="men-health.html" class="submenu__title">Men’s health </a>
 									<li class="submenu__item">
 										<a href="urofortex.html" class="submenu__link">Urofortex</a>
+									</li>
+								</ul>
+								<ul class="submenu__list">
+									<a href="muscles.html" class="submenu__title">Muscles</a>
+									<li class="submenu__item">
+										<a href="fortumax.html" class="submenu__link">FortuMax</a>
 									</li>
 								</ul>
 							</div>
@@ -118,24 +137,23 @@
 						<p class="search-elements__item-name">Immuno up</p>
 					</a>
 					<a href="omega-3.html" class="search-elements__item df">
-						<img class="search-elements__item-img bd" src="" alt="">
+						<img class="search-elements__item-img bd" src="./images/dest/productsImages/omega-3.png" alt="">
 						<p class="search-elements__item-name">Omega-3</p>
 					</a>
 					<a href="urofortex.html" class="search-elements__item df">
 						<img class="search-elements__item-img bd" src="./images/dest/productsImages/urofortex.png" alt="">
 						<p class="search-elements__item-name">Urofortex</p>
 					</a>
+					<a href="urofortex.html" class="search-elements__item df">
+						<img class="search-elements__item-img bd" src="./images/dest/productsImages/fotrumax.png" alt="">
+						<p class="search-elements__item-name">Fortumax</p>
+					</a>
 				</div>
-				<!-- <button class="btn-reset btn-bag df align-center">
-					<svg class='btn-bag__icon'>
-						<use xlink:href=images/dest/sprite.svg#bag> </use> </svg> <p class="btn-bag__text">Your bag</p>
-				</button> -->
 			</div>
 		</div>
-
 	</header>
 	<main class="main">
-		<section class="hero" style="background-image: url('./images/dest/mainPage/heroBg.png');">
+		<section class="hero" >
 			<div class="container hero__container df flex-column">
 				<div class="hero__info">
 					<h1 class="hero__title">
@@ -186,8 +204,19 @@
 										</p>
 							</div>
 						</div>
+						<div class="swiper-slide">
+							<div class="swiper-slide__box">
+								<svg class='swiper-slide__img'>
+									<use xlink:href=images/dest/sprite.svg#muscles> </use> </svg> <p class="swiper-slide__text">
+										Muscles
+										</p>
+							</div>
+						</div>
 					</div>
+
 				</div>
+				<div class="slideProdDescr-btn slideProdDescr-btn-prev"></div>
+				<div class="slideProdDescr-btn slideProdDescr-btn-next"></div>
 				<a href="categories.html" class="product-descr__link link--big mr-a">Show all categories</a>
 			</div>
 		</div>
@@ -421,6 +450,32 @@
 
 
 						</div>
+						<div class="swiper-slide">
+							<div class="categories categories-muscles">
+								<h3 class="categories__title">Muscles</h3>
+								<div class="categories__items">
+									<div class="categories__item">
+										<div class="categories-box--img">
+											<img class="categories__img" src="./images/dest/mainPage/products/muscles/item-1.png" alt="">
+										</div>
+										<div class="prod-info">
+											<h4 class="prod-info__name">FortuMax</h4>
+											<ul class="prod-info__list">
+												<li class="prod-info__list-item">Improves your erectile function/li>
+												<li class="prod-info__list-item">Boosts your libido</li>
+												<li class="prod-info__list-item">Prevents prostate cancer</li>
+												<li class="prod-info__list-item">Helps to solve urinary problems</li>
+											</ul>
+										</div>
+										<div class="categories-box">
+											<a href="fortumax.html" class="link--small">Show more</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
 					</div>
 					<div class="slide-btn slide-btn-prev"></div>
 					<div class="slide-btn slide-btn-next"></div>
@@ -429,7 +484,7 @@
 		</section>
 		<div class="wrapper">
 			<section class="about-more-products">
-				<div class="about-more-products__top df justify-center">
+				<div class="about-more-products__top df justify-center wrap">
 					<div class="about-more-products__top-left">
 						<div class="about-more-products__top-inner">
 							<h3 class="about-more-products__title">

@@ -9,6 +9,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
   btnSearch.addEventListener('click', visibleElemSearch);
 
+  window.addEventListener('click', function (event) {
+    let target = event.target;
+    let itsBtnSearch = target == btnSearch || btnSearch.contains(target);
+    let itsInputSearch = target == inputSearch;
+    let itsSearchElement = target == searchBox || searchBox.contains(target);
+    let itsOpenedSearchBox = inputSearch.classList.contains('header-search__input--visible');
+    if (!itsBtnSearch && !itsInputSearch && !itsSearchElement && itsOpenedSearchBox) {
+      visibleElemSearch()
+    }
+  })
+
   function visibleElemSearch() {
     inputSearch.classList.toggle('header-search__input--visible');
     searchBox.classList.toggle('hide');
