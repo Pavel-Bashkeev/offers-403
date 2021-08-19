@@ -381,3 +381,27 @@
     z-index: 14;
   }
 }
+
+@media (max-width: 440px) {
+  .header-search {
+    margin-right: 0px;
+  }
+
+  .header-search__text {
+    display: none;
+  }
+
+  .header-search__icon {
+    margin-right: 0px;
+  }
+
+  .search-elements {
+    right: 0px;
+  }
+
+  .header-search__input--visible {
+
+    right: 0px;
+
+  }
+}

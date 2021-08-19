@@ -5,5 +5,19 @@ if(sliderDescr){
     loop: false,
     freeMode: true,
     allowTouchMove: false,
+    navigation: {
+      nextEl: '.slideProdDescr-btn-next',
+      prevEl: '.slideProdDescr-btn-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        allowTouchMove: true,
+      },
+      520:{
+        slidesPerView: 5,
+        allowTouchMove: false,
+      }
+    }
   })
 }
