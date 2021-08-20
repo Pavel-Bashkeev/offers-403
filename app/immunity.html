@@ -15,10 +15,17 @@
 <body>
 	<header class="header">
 		<div class="container df justify-beetwen align-center header__container">
-			<nav class="menu">
+			<div class="burger-menu ">
+				<span class="burger-menu__line"></span>
+				<span class="burger-menu__line"></span>
+				<span class="burger-menu__line"></span>
+			</div>
+			<!-- menu--visible burger-menu--visible -->
+			<nav class="menu ">
 				<ul class="menu__list df align-center">
 					<li class="menu__item menu-second">
-						<button class="btn-reset submenu__btn" aria-expanded="false">Categories</button>
+						<button class="btn-reset submenu__btn" aria-expanded="false">Categories <span
+								class="submenu__btn-flag"></span></button>
 						<div class="submenu" aria-hidden='true'>
 							<div class="container  df">
 								<ul class="submenu__list">
@@ -46,7 +53,7 @@
 									</li>
 								</ul>
 								<ul class="submenu__list">
-									<a href="immunity.html" class="submenu__title">Immunity</a>
+									<a href="immunity.html" class="submenu__title submenu__link--active">Immunity</a>
 									<li class="submenu__item">
 										<a href="immuno-up.html" class="submenu__link">Immuno up</a>
 									</li>
@@ -58,6 +65,12 @@
 									<a href="men-health.html" class="submenu__title">Men’s health </a>
 									<li class="submenu__item">
 										<a href="urofortex.html" class="submenu__link">Urofortex</a>
+									</li>
+								</ul>
+								<ul class="submenu__list">
+									<a href="muscles.html" class="submenu__title">Muscles</a>
+									<li class="submenu__item">
+										<a href="fortumax.html" class="submenu__link">FortuMax</a>
 									</li>
 								</ul>
 							</div>
@@ -118,21 +131,20 @@
 						<p class="search-elements__item-name">Immuno up</p>
 					</a>
 					<a href="omega-3.html" class="search-elements__item df">
-						<img class="search-elements__item-img bd" src="" alt="">
+						<img class="search-elements__item-img bd" src="./images/dest/productsImages/omega-3.png" alt="">
 						<p class="search-elements__item-name">Omega-3</p>
 					</a>
 					<a href="urofortex.html" class="search-elements__item df">
 						<img class="search-elements__item-img bd" src="./images/dest/productsImages/urofortex.png" alt="">
 						<p class="search-elements__item-name">Urofortex</p>
 					</a>
+					<a href="urofortex.html" class="search-elements__item df">
+						<img class="search-elements__item-img bd" src="./images/dest/productsImages/fotrumax.png" alt="">
+						<p class="search-elements__item-name">Fortumax</p>
+					</a>
 				</div>
-				<!-- <button class="btn-reset btn-bag df align-center">
-					<svg class='btn-bag__icon'>
-						<use xlink:href=images/dest/sprite.svg#bag> </use> </svg> <p class="btn-bag__text">Your bag</p>
-				</button> -->
 			</div>
 		</div>
-
 	</header>
 	<main class="immunity grow">
 		<div class="back-products">
@@ -140,51 +152,53 @@
 				<a href="all-products.html" class="back-products__link">Back to all products</a>
 			</div>
 		</div>
-		<div class="top" style="background-image: url('./images/dest/pageImmunity/top-bg.jpg');">
+		<div class="top" >
 			<div class="container top__container">
 				<h1 class="top__title">Immunity</h1>
 			</div>
 		</div>
 		<h1 class="immunity-title">
-			Mother nature comes to your rescue to help you fight infections and maintain health. Try our natural immune-strengthening complexes to improve the state of your organism.		</h1>
-			<div class="categories categories-immunity ">
-				<div class="categories__items">
-					<div class="categories__item">
-						<div class="categories-box--img">
-							<img class="categories__img" src="./images/dest/mainPage/products/immunity/item-1.png" alt="">
-						</div>
-						<div class="prod-info">
-							<h4 class="prod-info__name">Immuno up</h4>
-							<ul class="prod-info__list">
-								<li class="prod-info__list-item">Strengthens the immunity</li>
-								<li class="prod-info__list-item">Prevents from viruses and bacteria</li>
-								<li class="prod-info__list-item">Slows down the aging process</li>
-								<li class="prod-info__list-item">Improves metabolism in the tissues</li>
-							</ul>
-						</div>
-						<div class="categories-box">
-							<a href="immuno-up.html" class="link--small">Show more</a>
-						</div>
+			Mother nature comes to your rescue to help you fight infections and maintain health. Try our natural
+			immune-strengthening complexes to improve the state of your organism.
+		</h1>
+		<div class="categories categories-immunity ">
+			<div class="categories__items">
+				<div class="categories__item">
+					<div class="categories-box--img">
+						<img class="categories__img img-immunityUp" src="./images/dest/mainPage/products/immunity/item-1.png" alt="">
 					</div>
-					<div class="categories__item">
-						<div class="categories-box--img">
-							<img class="categories__img" src="./images/dest/mainPage/products/immunity/item-2.png" alt="">
-						</div>
-						<div class="prod-info">
-							<h4 class="prod-info__name">Omega 3</h4>
-							<ul class="prod-info__list">
-								<li class="prod-info__list-item">Reduces the risk of cardiovascular diseases</li>
-								<li class="prod-info__list-item">Improves brain activity</li>
-								<li class="prod-info__list-item">Supports the immune system</li>
-								<li class="prod-info__list-item">Increases your efficiency</li>
-							</ul>
-						</div>
-						<div class="categories-box">
-							<a href="omega-3.html" class="link--small">Show more</a>
-						</div>
+					<div class="prod-info">
+						<h4 class="prod-info__name">Immuno up</h4>
+						<ul class="prod-info__list">
+							<li class="prod-info__list-item">Strengthens the immunity</li>
+							<li class="prod-info__list-item">Prevents from viruses and bacteria</li>
+							<li class="prod-info__list-item">Slows down the aging process</li>
+							<li class="prod-info__list-item">Improves metabolism in the tissues</li>
+						</ul>
+					</div>
+					<div class="categories-box">
+						<a href="immuno-up.html" class="link--small">Show more</a>
+					</div>
+				</div>
+				<div class="categories__item">
+					<div class="categories-box--img">
+						<img class="categories__img" src="./images/dest/mainPage/products/immunity/item-2.png" alt="">
+					</div>
+					<div class="prod-info">
+						<h4 class="prod-info__name">Omega 3</h4>
+						<ul class="prod-info__list">
+							<li class="prod-info__list-item">Reduces the risk of cardiovascular diseases</li>
+							<li class="prod-info__list-item">Improves brain activity</li>
+							<li class="prod-info__list-item">Supports the immune system</li>
+							<li class="prod-info__list-item">Increases your efficiency</li>
+						</ul>
+					</div>
+					<div class="categories-box">
+						<a href="omega-3.html" class="link--small">Show more</a>
 					</div>
 				</div>
 			</div>
+		</div>
 	</main>
 	<footer class="footer">
 		<div class="container footer__container">

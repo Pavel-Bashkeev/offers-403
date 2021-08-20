@@ -26,20 +26,22 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	letter-spacing: 0.43px;
-	
+
 }
-body.hidden{
+
+body.hidden {
 	z-index: 1;
-  &::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left:0;
-    background-color: rgba($black, .6);
-    z-index: 1;
-  }
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba($black, .6);
+		z-index: 1;
+	}
 }
 
 .main {
@@ -187,10 +189,11 @@ body.hidden{
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		img{
+
+		img {
 			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 		}
-		
+
 
 		.slide__img {
 			display: block;
@@ -254,6 +257,7 @@ body.hidden{
 		background-color: #D65F57;
 	}
 }
+
 // muscules
 
 .categories-muscles>.categories__items>.categories__item>.categories-box--img {
@@ -261,6 +265,7 @@ body.hidden{
 		background-color: #D65F57;
 	}
 }
+
 // ---------------- категории и карточки товаров-------------------
 
 .top {
@@ -270,10 +275,11 @@ body.hidden{
 	position: relative;
 	z-index: 1;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	&::before{
+
+	&::before {
 		content: '';
 		position: absolute;
-		top:0;
+		top: 0;
 		left: 0;
 		z-index: -1;
 		width: 100%;
@@ -316,13 +322,14 @@ body.hidden{
 		letter-spacing: 1.91px;
 		margin-bottom: 64px;
 		color: $black;
-		
+
 	}
 
 	&__top {
 		justify-content: flex-start;
 		align-items: flex-start;
 		padding-top: 10px;
+
 		&-info {
 			width: 50%;
 		}
@@ -340,14 +347,18 @@ body.hidden{
 	}
 
 	&__bottom {
-		background-color: #83D2B6;
+
 		justify-content: flex-end;
-		&-right{
+		align-items: stretch;
+
+		&-right {
 			width: 50%;
 		}
+
 		&-info {
 			width: 50%;
 			padding: 20px 0;
+			background-color: #83D2B6;
 		}
 
 		&-inner {
@@ -355,6 +366,7 @@ body.hidden{
 			margin-right: auto;
 			color: $black;
 			padding-left: 40px;
+
 
 		}
 	}
@@ -386,9 +398,10 @@ body.hidden{
 
 		&__container {
 			position: relative;
-    min-height: inherit;
-    padding-top: 56px;
-    padding-bottom: 40px;
+			min-height: inherit;
+			padding-top: 56px;
+			padding-bottom: 40px;
+
 		}
 
 		&__info {
@@ -422,7 +435,7 @@ body.hidden{
 
 			img {
 				display: block;
-				
+
 			}
 		}
 
@@ -436,7 +449,7 @@ body.hidden{
 			letter-spacing: 0.48px;
 			color: #7CC6AC;
 			z-index: 1;
-			white-space: none;
+			white-space: nowrap;
 		}
 	}
 }
@@ -458,7 +471,9 @@ body.hidden{
 		.about-product {
 			&__description {
 				.about-product__bottom {
-					background-color: #F5C934;
+					&-info {
+						background-color: #F5C934;
+					}
 				}
 			}
 		}
@@ -482,19 +497,24 @@ body.hidden{
 		.about-product {
 			&__description {
 				.about-product__bottom {
-					background-color: #93D4E9;
+					&-info {
+						background-color: #93D4E9;
+					}
 				}
 			}
 		}
 	}
 }
+
 .one-product.men-category {
 	.top {
 		background-color: #D65F57;
 		color: $white;
-		&__title{
-			color:$white;
+
+		&__title {
+			color: $white;
 		}
+
 		&-decor {
 			color: #CD4B42;
 		}
@@ -508,12 +528,16 @@ body.hidden{
 		.about-product {
 			&__description {
 				.about-product__bottom {
-					background-color: #D65F57;
-					&-inner{
-						.about-product__description-title{
+					&-info {
+						background-color: #D65F57;
+					}
+
+					&-inner {
+						.about-product__description-title {
 							color: $white;
 						}
-						.about-product__description-text{
+
+						.about-product__description-text {
 							color: $white;
 						}
 					}
@@ -522,6 +546,7 @@ body.hidden{
 		}
 	}
 }
+
 .one-product.muscles-category {
 	.top {
 		background-color: #9C7CB5;
@@ -539,7 +564,9 @@ body.hidden{
 		.about-product {
 			&__description {
 				.about-product__bottom {
-					background-color: #9C7CB5;
+					&-info {
+						background-color: #9C7CB5;
+					}
 				}
 			}
 		}
@@ -547,3 +574,261 @@ body.hidden{
 }
 
 // ----------------about-product-----------------
+@media (max-width: 1700px) {
+	.about-product__top-right {
+		position: absolute;
+		right: 0;
+		z-index: 1;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($white, .85);
+		}
+	}
+
+	.about-product__top-info {
+		width: 100%;
+		padding: 0px 15px;
+		position: relative;
+		z-index: 2;
+	}
+
+	.about-product__top-inner {
+		max-width: 100%;
+		margin-left: 0;
+	}
+
+	.about-product__bottom {
+
+		position: relative;
+		z-index: 3;
+	}
+}
+
+@media (max-width: 1450px) {
+	.one-product .top__container {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+
+	.one-product .top-decor--img {
+		position: relative;
+		left: 0;
+		bottom: 0;
+		margin-left: 20px;
+		margin-bottom: -70px;
+		transform: translateX(0%);
+	}
+
+	.one-product .top-decor {
+		left: auto;
+		bottom: 42%;
+		right: 0px;
+		transform: rotate(-90deg) translateX(0px) translateY(218px);
+		font: 900 82px/87px Roboto;
+		height: fit-content;
+	}
+
+	.about-product__top-right {
+		display: none;
+	}
+
+	.one-product.slimming-category.fortunella-caps .top-decor--img {
+		position: static;
+		margin-bottom: -80px;
+		width: 280px;
+	}
+
+	.one-product.slimming-category .top-decor {
+		transform: rotate(-90deg) translateX(-18px) translateY(196px);
+		font: 900 115px/115px Roboto;
+	}
+
+	.one-product.slimming-category .top-decor--fortunella-drops,
+	.one-product.slimming-category .top-decor--fortunella-caps {
+		transform: rotate(-90deg) translateX(4px) translateY(215px);
+		font: 900 71px/84px Roboto;
+	}
+
+	.one-product.slimming-category .top-decor--fortunella-caps {
+		transform: rotate(-90deg) translateX(4px) translateY(205px);
+
+	}
+
+	.one-product.immunity-category .top-decor {
+		color: #72c1db;
+		transform: rotate(-90deg) translateX(0) translateY(158px);
+	}
+
+	.one-product.immunity-category .top-decor--omega {
+		transform: rotate(-90deg) translateX(0) translateY(110px);
+	}
+
+	.one-product .top-decor--urofortex {
+		transform: rotate(-90deg) translateX(0) translateY(125px);
+	}
+
+	.one-product .top-decor--fortumax {
+		transform: rotate(-90deg) translateX(0) translateY(121px);
+	}
+}
+
+@media (max-width: 1366px) {
+	.about-product__top {
+		margin-bottom: 20px;
+	}
+
+	.about-product__description-text {
+		margin-bottom: 0;
+	}
+}
+
+@media(max-width:1100px) {
+	.about-product__description-title {
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 950px) {
+	.one-product .top__container {
+		display: block;
+	}
+
+	.one-product .top__info {
+		margin-bottom: 30px;
+	}
+
+	.one-product .top-decor--img {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: -70px;
+
+	}
+
+	.one-product .top-decor {
+		transform: rotate(-90deg) translateX(0) translateY(340px);
+		font: 900 130px/136px Roboto;
+		white-space: nowrap;
+	}
+
+	.one-product .top-decor {
+		transform: rotate(-90deg) translateX(60px) translateY(290px);
+		font: 900 110px/110px Roboto;
+		white-space: nowrap;
+	}
+
+	.one-product.slimming-category .top-decor--fortunella-drops,
+	.one-product.slimming-category .top-decor--fortunella-caps {
+		transform: rotate(-90deg) translateX(4px) translateY(376px);
+		font: 900 120px/125px Roboto;
+	}
+
+	.one-product.slimming-category .top-decor--fortunella-caps {
+		transform: rotate(-90deg) translateX(4px) translateY(356px);
+	}
+
+	.one-product.immunity-category .top-decor {
+		color: #72c1db;
+		transform: rotate(-90deg) translateX(60px) translateY(217px);
+	}
+
+	.one-product.immunity-category .top-decor--omega {
+		transform: rotate(-90deg) translateX(60px) translateY(144px);
+	}
+
+	.one-product .top-decor--urofortex {
+		transform: rotate(-90deg) translateX(60px) translateY(160px);
+	}
+
+	.one-product .top-decor--fortumax {
+		transform: rotate(-90deg) translateX(60px) translateY(165px);
+	}
+
+	.one-product .top-decor--patch {
+		font: 900 86px/110px Roboto;
+	}
+
+	.about-product__bottom {
+		flex-wrap: wrap;
+	}
+
+	.about-product__bottom-info {
+		width: 100%;
+	}
+
+	.about-product__bottom-right {
+		width: 100%;
+	}
+}
+
+@media (max-width:480px) {
+	.about-product__top {
+		flex-wrap: wrap;
+		margin-bottom: 0px;
+	}
+
+	.about-product__top-right {
+		display: block;
+		position: static;
+		width: 100%;
+	}
+
+	.about-product__top-right::after {
+		display: none;
+	}
+
+	.about-product__bottom-right {
+		display: none;
+	}
+
+	.about-product__bottom-info {
+		width: 100%;
+	}
+
+	.categories__items {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.categories__item {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.categories-box--img img {
+		width: 90%;
+	}
+
+	.about-product__description-title {
+		margin-bottom: 35px;
+	}
+
+	.about-product__description-text {
+		margin-bottom: 30px;
+		padding-right: 0px;
+	}
+}
+
+@media (max-width: 365px) {
+	.categories-box--img {
+		margin-bottom: 0px;
+
+		&::after {
+			width: 250px;
+			height: 250px;
+		}
+	}
+
+	.categories-box--img img {
+		width: 80%;
+	}
+
+
+}

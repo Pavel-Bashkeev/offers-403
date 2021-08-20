@@ -15,10 +15,17 @@
 <body>
 	<header class="header">
 		<div class="container df justify-beetwen align-center header__container">
-			<nav class="menu">
+			<div class="burger-menu ">
+				<span class="burger-menu__line"></span>
+				<span class="burger-menu__line"></span>
+				<span class="burger-menu__line"></span>
+			</div>
+			<!-- menu--visible burger-menu--visible -->
+			<nav class="menu ">
 				<ul class="menu__list df align-center">
 					<li class="menu__item menu-second">
-						<button class="btn-reset submenu__btn" aria-expanded="false">Categories</button>
+						<button class="btn-reset submenu__btn" aria-expanded="false">Categories <span
+								class="submenu__btn-flag"></span></button>
 						<div class="submenu" aria-hidden='true'>
 							<div class="container  df">
 								<ul class="submenu__list">
@@ -30,7 +37,7 @@
 										<a href="fortuflex-caps.html" class="submenu__link">Fortuflex caps</a>
 									</li>
 									<li class="submenu__item">
-										<a href="fortuflex-patches.html" class="submenu__link">Fortuflex patches</a>
+										<a href="fortuflex-patches.html" class="submenu__link submenu__link--active">Fortuflex patches</a>
 									</li>
 								</ul>
 								<ul class="submenu__list">
@@ -58,6 +65,12 @@
 									<a href="men-health.html" class="submenu__title">Men’s health </a>
 									<li class="submenu__item">
 										<a href="urofortex.html" class="submenu__link">Urofortex</a>
+									</li>
+								</ul>
+								<ul class="submenu__list">
+									<a href="muscles.html" class="submenu__title">Muscles</a>
+									<li class="submenu__item">
+										<a href="fortumax.html" class="submenu__link">FortuMax</a>
 									</li>
 								</ul>
 							</div>
@@ -118,21 +131,20 @@
 						<p class="search-elements__item-name">Immuno up</p>
 					</a>
 					<a href="omega-3.html" class="search-elements__item df">
-						<img class="search-elements__item-img bd" src="" alt="">
+						<img class="search-elements__item-img bd" src="./images/dest/productsImages/omega-3.png" alt="">
 						<p class="search-elements__item-name">Omega-3</p>
 					</a>
 					<a href="urofortex.html" class="search-elements__item df">
 						<img class="search-elements__item-img bd" src="./images/dest/productsImages/urofortex.png" alt="">
 						<p class="search-elements__item-name">Urofortex</p>
 					</a>
+					<a href="urofortex.html" class="search-elements__item df">
+						<img class="search-elements__item-img bd" src="./images/dest/productsImages/fotrumax.png" alt="">
+						<p class="search-elements__item-name">Fortumax</p>
+					</a>
 				</div>
-				<!-- <button class="btn-reset btn-bag df align-center">
-					<svg class='btn-bag__icon'>
-						<use xlink:href=images/dest/sprite.svg#bag> </use> </svg> <p class="btn-bag__text">Your bag</p>
-				</button> -->
 			</div>
 		</div>
-
 	</header>
 	<main class="one-product grow">
 		<div class="back-products">
@@ -157,14 +169,15 @@
 					<img class="top-img" src="./images/dest/productsImages/fortuflex_patch.png" alt="">
 				</div>
 			</div>
-			<span class="top-decor">Fortuflex patches</span>
+			<span class="top-decor top-decor--patch">Fortuflex patches</span>
 		</div>
 		<div class="wrapper">
 			<section class="about-product">
 				<div class="container">
 					<h3 class="about-product__title">
-						The patches act up to 12 hours and are easy to use. They can be used as an instant pain reliever as well as a part of therapy to restore joint health.
-					</h3>
+						The patch is designed for people who want to maintain joint health. The patch is 100% natural and helps to restore the mobility of the joint and maintain its health.
+						The natural ingredients in its composition act through the skin thus protecting the liver from unnecessary load. The patches are easy to use and very effective. They help to restore the function of the joints. It improves the metabolic processes, occurring in the joint, and protects it from the damage. 
+						The components also relive inflammatory processes in the joint and improve its elasticity. It can be used by both sportsmen and ordinary people, suffering from joint health problems or willing to protect their joints from the aging processes.  					</h3>
 				</div>
 				<div class="about-product__description">
 					<div class="about-product__top df items-center">
@@ -172,24 +185,19 @@
 							<div class="about-product__top-inner">
 								<h5 class="about-product__description-title">Ingredients</h5>
 								<p class="about-product__description-text">
-									<span class="about-product__description-text--accent db">Menthol </span>
-									Has local anesthetic and antiseptic properties. Widely used to relieve muscle pain and fatigue.
+									<span class="about-product__description-text--accent db">Glucosamine </span>
+									Is a natural component of joint tissue that helps repair cartilage, joints and ligaments. Glucosamine contributes to the formation of a full-fledged elastic and resilient cartilage of the joints, prevents the development of inflammation in the tissues of the joints. It enhances the formation of joint fluid that fills the joint.								</p>
+								<p class="about-product__description-text">
+									<span class="about-product__description-text--accent db">Chondroitin </span>
+									Is a substance that is part of the cartilage tissue, ligaments and bones. It retains moisture, participates in metabolic processes, and stimulates the production of synovial fluid. 
 								</p>
 								<p class="about-product__description-text">
-									<span class="about-product__description-text--accent db">Symphytum officinal leaf extract</span>
-									Accelerates the healing of fractures, restores the damaged periosteum.
+									<span class="about-product__description-text--accent db">Cetyl myristoleate </span>
+									Helps to increase joint mobility. Increases the elasticity of cartilage tissue, increases the elasticity of the walls of blood vessels and connective tissues. Promotes the regeneration of cartilage and connective tissue, has an anti-inflammatory effect.
 								</p>
 								<p class="about-product__description-text">
-									<span class="about-product__description-text--accent db">Hydrogenated castor oil</span>
-									90% composed of rare ricinoleic acid, which is not found in any other oil. It has analgesic, bactericidal, anti-inflammatory and regenerative effects.
-								</p>
-								<p class="about-product__description-text">
-									<span class="about-product__description-text--accent db">Abies Sibirica oil</span>
-									A miracle cure for improving dynamic function, eliminating pain and other symptoms of musculoskeletal diseases. Accelerates the processes of cell metabolism, promotes the healing of destroyed tissues, normalizes blood flow in small vessels
-								</p>
-								<p class="about-product__description-text">
-									<span class="about-product__description-text--accent db">Aesculus Hippocastanum seed oil</span>
-									Has decongestant, venotonic and anti-inflammatory effects
+									<span class="about-product__description-text--accent db">Vitamin C</span>
+									 Participates in the synthesis of collagen, which strengthens blood vessels, ligaments and bones.
 								</p>
 							</div>
 						</div>
@@ -205,7 +213,7 @@
 							<div class="about-product__bottom-inner">
 								<h5 class="about-product__description-title">Use</h5>
 								<p class="about-product__description-text">
-									Apply to the damaged area and rub in. Wash your hands after use. Don’t use in case of allergic response.
+									Apply to undamaged skin. After 24 hours, remove and replace with a new patch in a slightly different position. Duration of use - not more than 30 days.
 								</p>
 							</div>
 						</div>

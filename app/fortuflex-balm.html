@@ -15,16 +15,23 @@
 <body>
 	<header class="header">
 		<div class="container df justify-beetwen align-center header__container">
-			<nav class="menu">
+			<div class="burger-menu ">
+				<span class="burger-menu__line"></span>
+				<span class="burger-menu__line"></span>
+				<span class="burger-menu__line"></span>
+			</div>
+			<!-- menu--visible burger-menu--visible -->
+			<nav class="menu ">
 				<ul class="menu__list df align-center">
 					<li class="menu__item menu-second">
-						<button class="btn-reset submenu__btn" aria-expanded="false">Categories</button>
+						<button class="btn-reset submenu__btn" aria-expanded="false">Categories <span
+								class="submenu__btn-flag"></span></button>
 						<div class="submenu" aria-hidden='true'>
 							<div class="container  df">
 								<ul class="submenu__list">
 									<a href="joints.html" class="submenu__title">Joint health</a>
 									<li class="submenu__item">
-										<a href="fortuflex-balm.html" class="submenu__link">Fortuflex balm</a>
+										<a href="fortuflex-balm.html" class="submenu__link submenu__link--active">Fortuflex balm</a>
 									</li>
 									<li class="submenu__item">
 										<a href="fortuflex-caps.html" class="submenu__link">Fortuflex caps</a>
@@ -58,6 +65,12 @@
 									<a href="men-health.html" class="submenu__title">Men’s health </a>
 									<li class="submenu__item">
 										<a href="urofortex.html" class="submenu__link">Urofortex</a>
+									</li>
+								</ul>
+								<ul class="submenu__list">
+									<a href="muscles.html" class="submenu__title">Muscles</a>
+									<li class="submenu__item">
+										<a href="fortumax.html" class="submenu__link">FortuMax</a>
 									</li>
 								</ul>
 							</div>
@@ -118,21 +131,20 @@
 						<p class="search-elements__item-name">Immuno up</p>
 					</a>
 					<a href="omega-3.html" class="search-elements__item df">
-						<img class="search-elements__item-img bd" src="" alt="">
+						<img class="search-elements__item-img bd" src="./images/dest/productsImages/omega-3.png" alt="">
 						<p class="search-elements__item-name">Omega-3</p>
 					</a>
 					<a href="urofortex.html" class="search-elements__item df">
 						<img class="search-elements__item-img bd" src="./images/dest/productsImages/urofortex.png" alt="">
 						<p class="search-elements__item-name">Urofortex</p>
 					</a>
+					<a href="urofortex.html" class="search-elements__item df">
+						<img class="search-elements__item-img bd" src="./images/dest/productsImages/fotrumax.png" alt="">
+						<p class="search-elements__item-name">Fortumax</p>
+					</a>
 				</div>
-				<!-- <button class="btn-reset btn-bag df align-center">
-					<svg class='btn-bag__icon'>
-						<use xlink:href=images/dest/sprite.svg#bag> </use> </svg> <p class="btn-bag__text">Your bag</p>
-				</button> -->
 			</div>
 		</div>
-
 	</header>
 	<main class="one-product grow">
 		<div class="back-products">

@@ -1,34 +1,58 @@
-.muscles{
-  
+.muscles {
+
   .top {
     min-height: 323px;
-    &::before{
+    background-image: url('../images/dest/pageMuscles/top-bg.jpg');
+
+    &::before {
       background-color: rgba(#9C7CB5, .5);
     }
-    &__container{
+
+    &__container {
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: inherit;
       width: 100%;
     }
-    &__title{
+
+    &__title {
       margin-top: -72px;
       letter-spacing: 2px;
     }
   }
-  &__title{
+
+  &__title {
     padding: 26px 0 0px;
     max-width: 1009px;
     margin: 0 auto;
     text-align: center;
-    font:400 18px/25px $font;
+    font: 400 18px/25px $font;
     letter-spacing: 0.48px;
     color: #727272;
   }
-  .categories{
-    &__items{
+
+  .categories {
+    &__items {
       padding: 36px 50px 50px;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .muscles {
+
+    .top {
+      background-image: url('../images/dest/pageMuscles/topBgMin.jpg');
+    }
+  }
+
+  .muscles .categories__items {
+    padding: 36px 10px 50px;
+  }
+
+  .muscles__title {
+    padding: 26px 15px 0;
+
   }
 }

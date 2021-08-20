@@ -6,7 +6,7 @@
     background-color: #eedecf;
     @extend %bg-cover;
     background-image: url('../images/dest/mainPage/heroBg.png');
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
 
     &__container {
       justify-content: center;
@@ -261,15 +261,20 @@
     @extend %bg-contain;
     background-size: 50%;
     background-image: url('../images/dest/sprite.svg#prevArrow');
-    left: 0;
+    left: 10px;
   }
 
   .slider-one-product-btn-next {
     @extend %bg-contain;
     background-size: 50%;
     background-image: url('../images/dest/sprite.svg#nextArrow');
-    right: 0;
+    right: 10px;
   }
+  .slider-one-product>.slider-one-product__container>.swiper-container>.swiper-wrapper>.swiper-slide>.categories__title {
+		margin-top: -15px;
+		margin-bottom: 30px;
+
+	}
   // slider-categories
 
   // about-more-product

@@ -2,6 +2,7 @@
   
   .top {
     min-height: 323px;
+    background-image: url('../images/dest/pageJoints/top-bg.jpg');
     &::before{
       background-color: rgba(#83D2B6, .5);
     }
@@ -31,4 +32,18 @@
       padding: 36px 50px 50px;
     }
   }
+}
+@media (max-width: 480px) {
+  .joints{
+    .top{
+      background-image: url('../images/dest/pageJoints/topBgMin.jpg');
+
+    }
+  }
+  .joints .categories__items {
+    padding: 36px 15px 50px;
+}
+.joints-title {
+  padding: 26px 10px 0;
+}
 }

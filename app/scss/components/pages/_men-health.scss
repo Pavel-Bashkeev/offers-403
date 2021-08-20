@@ -1,6 +1,7 @@
 .mens-health {
   .top {
     min-height: 323px;
+    background-image: url('../images/dest/pageMenhealth/top-bg.jpg');
     &::before{
       background-color: rgba($color: #D65F57, $alpha: 0.5);
     }
@@ -31,4 +32,17 @@
       padding:0px 50px 80px;
     }
   }
+}
+@media (max-width: 480px) {
+  .mens-health {
+    .top {
+      background-image: url('../images/dest/pageMenhealth/topBgMin.jpg');
+    }
+  }  
+  .mens-health__title {
+    padding: 30px 15px 30px;
+}
+.mens-health .categories__items {
+  padding: 0 10px 80px;
+}
 }

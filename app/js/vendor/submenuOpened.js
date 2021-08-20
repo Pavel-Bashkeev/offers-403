@@ -1,9 +1,10 @@
   let btnSubmenu = document.querySelector('.submenu__btn');
   let submenu = document.querySelector('.submenu');
   const menuMob = document.querySelector('.menu');
-
+  let btnAncor = document.querySelector('.submenu__btn-flag');
   const openedSubmenu =(event) => {
     btnSubmenu.classList.toggle('active-link');
+    btnAncor.classList.toggle('submenu__btn-flag--active')
     btnSubmenu.classList.contains('active-link') ? submenu.classList.add('submenu--opened') : submenu.classList.remove('submenu--opened');
     findHeight();
   }

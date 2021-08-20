@@ -1,6 +1,7 @@
 .slimming {
   .top {
     min-height: 323px;
+    background-image: url('../images/dest/pageSlimming/top-bg.jpg');
 
     &::before {
       background-color: rgba(#E7B91D, .5);
@@ -38,4 +39,21 @@
     }
   }
 
+}
+
+@media (max-width: 480px) {
+  .slimming {
+    .top {
+      min-height: 323px;
+      background-image: url('../images/dest/pageSlimming/topBgMin.jpg');
+    }
+  }
+
+  .slimming-title {
+    padding: 27px 15px 34px;
+  }
+
+  .slimming .categories__items {
+    padding: 0px 10px 80px;
+  }
 }

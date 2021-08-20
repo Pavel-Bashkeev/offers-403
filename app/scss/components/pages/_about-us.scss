@@ -162,3 +162,14 @@
     }
   }
 }
+
+@media (max-width: 970px) {
+  .about-us .compounds-descr {
+    flex-wrap: wrap;
+}
+.about-us .compounds-descr__info {
+  padding-left: 45px;
+  order:-1;
+  margin-bottom: 35px;
+}
+}

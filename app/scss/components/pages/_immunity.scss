@@ -2,6 +2,7 @@
 
   .top {
     min-height: 323px;
+    background-image: url('../images/dest/pageImmunity/top-bg.jpg');
 
     &::before {
       background-color: rgba(#93D4E9, .5);
@@ -34,7 +35,29 @@
 
   .categories {
     &__items {
-      padding:0px 50px 80px;
+      padding: 0px 50px 80px;
     }
   }
 }
+
+@media (max-width: 480px) {
+  .immunity {
+    .top {
+      background-image: url('../images/dest/pageImmunity/topBgMin.jpg');
+    }
+  }
+
+  .immunity .categories__items {
+    padding: 0 15px 80px;
+  }
+
+  .immunity-title {
+    padding: 30px 10px 30px;
+  }
+
+  .img-immunityUp {
+    width: 100%;
+  }
+}
+
+;

@@ -1,13 +1,17 @@
 const burgerBtn = document.querySelector('.burger-menu');
 const menuMob = document.querySelector('.menu');
 
+
 document.addEventListener('click', (event) => {
   let target = event.target;
   let itsMenuMob = target == menuMob || menuMob.contains(target);
   let itBtnBurger = target == burgerBtn || burgerBtn.contains(target);
   let itsMenuOpened = menuMob.classList.contains('menu--visible');
   itBtnBurger ? menuOpened() : '';
+
   !itsMenuMob && !itBtnBurger && itsMenuOpened ? menuOpened() : '';
+
+  
 });
 
 function menuOpened() {
