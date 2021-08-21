@@ -677,6 +677,18 @@ body.hidden {
 	.one-product .top-decor--fortumax {
 		transform: rotate(-90deg) translateX(0) translateY(121px);
 	}
+
+	.one-product .top-decor--fortuflex-caps {
+		transform: rotate(-90deg) translateX(0) translateY(206px);
+		font: 900 78px/87px Roboto;
+	}
+	.one-product .top-decor--patch{
+		transform: rotate(
+			-90deg
+			) translateX(0) translateY(232px);
+					font: 900 70px/87px Roboto;
+	}
+
 }
 
 @media (max-width: 1366px) {

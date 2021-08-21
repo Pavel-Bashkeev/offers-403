@@ -21,6 +21,8 @@
 
   &__container {
     display: flex;
+    position: relative;
+    z-index: 2;
   }
 }
 
