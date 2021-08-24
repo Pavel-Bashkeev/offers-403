@@ -1,0 +1,73 @@
+.blog {
+  .top {
+    background-image: url('../images/dest/pageBlog/top-bg.jpg');
+    &__container{
+      min-height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 9%;
+    }
+    &__title{
+      color: $white;
+    }
+  }
+
+  .blogs {
+    padding: 61px 22px 180px;
+    gap: 52px 60px;
+
+    &-item {
+      max-width: 464px;
+      width: 100%;
+      display: flex;
+      justify-content: stretch;
+      flex-direction: column;
+
+      &__box {
+        border: 1px solid $black;
+        margin-bottom: 24px;
+
+        img {
+          display: block;
+        }
+      }
+
+      &__title {
+        font: 700 25px / 37px $font;
+        letter-spacing: 1.45px;
+        padding-right: 14px;
+        color: $black;
+        margin-bottom: 6px;
+      }
+
+      &__descr {
+        font: 400 16px / 25px $font;
+        color: #989898;
+        margin-bottom: 27px;
+        letter-spacing: 1px;
+        padding-right: 33px;
+      }
+
+      &__link {
+        display: block;
+        margin-top: auto;
+        padding: 12px 41px;
+      }
+
+    }
+  }
+}
+@media(max-width: 480px){
+  .blog{
+    .top{
+      background-image: url('../images/dest/pageBlog/topBgMin.jpg');
+      min-height: 490px;
+      &__container{
+        justify-content: flex-start;
+      }
+    }
+    
+  }
+}
