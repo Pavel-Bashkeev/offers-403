@@ -1,0 +1,12 @@
+.all-products{
+  .top{
+    background-image: url('../images/dest/pageAllProducts/top-bg.jpg');
+  }
+}
+@media (max-width: 480px) {
+  .all-products{
+    .top{
+      background-image: url('../images/dest/pageAllProducts/topBgMin.jpg');
+    }
+  }
+}

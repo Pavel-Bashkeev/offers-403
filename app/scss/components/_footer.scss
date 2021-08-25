@@ -2,9 +2,6 @@
   background-color: $bg;
   min-height: 390px;
   padding: 74px 120px;
-  @extend %bg-contain;
-  background-image: url('../images/dest/footer-bg.jpg');
-  background-position-x: right;
   position: relative;
   z-index: 1;
 

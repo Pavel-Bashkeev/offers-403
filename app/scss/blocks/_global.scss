@@ -262,7 +262,7 @@ body.hidden {
 
 .categories-muscles>.categories__items>.categories__item>.categories-box--img {
 	&::after {
-		background-color: #D65F57;
+		background-color: #9C7CB5;
 	}
 }
 
@@ -357,7 +357,7 @@ body.hidden {
 
 		&-info {
 			width: 50%;
-			padding: 20px 0;
+			padding: 20px 0 0;
 			background-color: #83D2B6;
 		}
 
@@ -365,6 +365,7 @@ body.hidden {
 			max-width: 756px;
 			margin-right: auto;
 			color: $black;
+			padding-top: 48px;
 			padding-left: 40px;
 
 

@@ -1,0 +1,28 @@
+.men-category.urofortex {
+  .top{
+    &__title{
+     color: $white;
+    }
+    &__subtitle{
+      color: $white;
+    }
+  }
+  .wrapper {
+    .about-product {
+      .about-product__description {
+        
+        .about-product__bottom{
+          &-info{
+            .about-product__bottom-inner{
+              padding-top: 46px;
+              .about-product__description-title,.about-product__description-text{
+                color: $white;
+                padding-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

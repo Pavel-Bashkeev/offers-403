@@ -1,0 +1,25 @@
+.immunity-category.omega-3{
+  .wrapper {
+    .about-product {
+      .about-product__description {
+        .about-product__top {
+          .about-product__top-info {
+            .about-product__top-inner {
+              padding-top: 0;
+            }
+          }
+        }
+        .about-product__bottom{
+          .about-product__bottom-info{
+            .about-product__bottom-inner {
+              padding-top: 48px;
+              .about-product__description-text{
+                padding-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
