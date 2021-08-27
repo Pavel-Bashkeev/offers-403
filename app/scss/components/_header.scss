@@ -247,6 +247,7 @@
   z-index: 10;
   transition: all .3s;
   display: none;
+  cursor: pointer;
 
   &__line {
     width: 100%;
@@ -262,6 +263,7 @@
 .burger-menu.burger-menu--visible {
   left: -16px;
   transition: all .3s;
+  cursor: pointer;
 
   .burger-menu__line {
     background-color: $white;
@@ -300,6 +302,15 @@
   transition: all .3s;
   z-index: 5;
   overflow-y: scroll;
+  &::-webkit-scrollbar{
+    width: 3px;
+    &-track{
+      background-color: rgba($white, 0.3);
+    }
+    &-thumb {
+      background-color: rgba(255, 255, 255, 0.8);
+  }
+  }
 
   .menu__list {
     flex-direction: column;

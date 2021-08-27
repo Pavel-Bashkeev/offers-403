@@ -25,7 +25,10 @@
 .dir-col {
 	flex-direction: column;
 }
-
+.items-center{
+	justify-content: center;
+	align-items: center;
+}
 .align-center {
 	align-items: center;
 }

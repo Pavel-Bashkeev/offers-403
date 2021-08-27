@@ -21,13 +21,14 @@
     position: relative;
     z-index: 2;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 60px;
     margin-bottom: 125px;
   }
 }
 
 .footer-nav {
-
+  
   &__item {
     text-align: center;
     &:not(:last-child) {
@@ -46,6 +47,7 @@
   justify-content: center;
   flex-grow: 0.5;
   gap: 60px;
+  
   &__link {
     text-align: center;
     font: 300 16px/20px $font;
@@ -80,15 +82,20 @@
 @media (max-width: 970px) {
   .footer {
     padding: 74px 0;
-
-
     background-size: cover;
 
     &__container {
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
     }
+  }
+  .footer-categories{
+    &__nav{
+      width: 40%;
+    }
+  }
+  .footer-nav{
+    width: 40%;
   }
 }
 
@@ -103,4 +110,18 @@
   .our-com {
     margin-left: 0px;
 }
+}
+@media (max-width: 400px) {
+  .footer-nav__item {
+    text-align: center;
+  }
+
+  .footer-categories{
+    &__nav{
+      width: 38%;
+    }
+  }
+  .footer-nav{
+    width: 38%;
+  }
 }

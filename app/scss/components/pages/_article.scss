@@ -1,69 +1,82 @@
-.article{
-  .top{
+.article {
+  .top {
     background-image: url('../images/dest/pageArticles/top-bg.jpg');
-    &__container{
+
+    &__container {
       padding-top: 68px;
       min-height: inherit;
     }
-    &__title{
+
+    &__title {
       color: $white;
       max-width: 689px;
       font: 700 30px / 35px $font;
       letter-spacing: 0.9px;
     }
-    &__box{
+
+    &__box {
       position: absolute;
       bottom: -75px;
-      left:50%;
+      left: 50%;
       transform: translateX(-50%);
       max-width: 480px;
     }
   }
 }
-.article-content{
+
+.article-content {
   max-width: 770px;
   padding-top: 112px;
   padding-right: 7px;
   padding-bottom: 58px;
-  &__paragraph{
+
+  &__paragraph {
     color: $black;
     font: 400 16px / 30px $font;
     letter-spacing: 1px;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
 }
-.articles-more{
+
+.articles-more {
   padding: 67px 0 91px;
   background-color: #f1f1f1;
-  &__title{
+
+  &__title {
     font: 700 30px / 35px $font;
     margin-bottom: 60px;
     color: $black;
   }
-  &__items{
-    gap: 52px 60px;
 
+  &__items {
+    gap: 52px 60px;
+    justify-content: center;
   }
 }
+
 @media (max-width: 480px) {
-  .article{
-    .top{
+  .article {
+    .top {
       background-image: none;
       min-height: auto;
-      &__container{
-        margin: 0 -15px;
+
+      &__container {
         display: flex;
         flex-direction: column;
-        padding-top: 0px;
-
+        padding-top: 0;
+        padding-left: 0px;
+        padding-right: 0px;
       }
-      &__title{
+
+      &__title {
         order: 2;
         color: $black;
       }
-      &__box{
+
+      &__box {
         position: static;
         transform: translateX(0);
         left: 0;
@@ -72,7 +85,8 @@
       }
     }
   }
+
   .article-content {
     padding-top: 30px;
-}
+  }
 }
