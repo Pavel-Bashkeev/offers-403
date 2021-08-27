@@ -1,7 +1,7 @@
 .footer {
   background-color: $bg;
   min-height: 390px;
-  padding: 74px 120px;
+  padding: 74px 120px 0px;
   position: relative;
   z-index: 1;
 
@@ -20,90 +20,62 @@
     display: flex;
     position: relative;
     z-index: 2;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 125px;
   }
 }
 
 .footer-nav {
-  &__title {
-    font: 700 20px /37px $font;
-    margin-bottom: 14px;
-    color: $white;
-  }
 
   &__item {
+    text-align: center;
     &:not(:last-child) {
       margin-bottom: 10px;
     }
   }
 
   &__link {
-    font: 400 16px/20px $font;
+    text-align: center;
+    font: 700 16px/20px $font;
     color: $white;
     letter-spacing: 0.43px;
   }
 }
-
-.footer-contacts {
-  margin-left: 17%;
-
-  &__address {
-    display: flex;
-    align-items: center;
-    margin-bottom: 35px;
-
-    &-text {
+.footer-categories{
+  justify-content: center;
+  flex-grow: 0.5;
+  gap: 60px;
+  &__link {
+    text-align: center;
+    font: 300 16px/20px $font;
+    color: #d6d6d6;
+    letter-spacing: 0.43px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+      text-shadow: 0 0 .65px rgb(255, 255, 255), 0 0 .65px rgb(255, 255, 255);
       color: $white;
-      font: 700 20px/30px $font;
-      letter-spacing: 0.46px;
-
-      &--br {
-        font: 400 16px/30px $font;
-      }
     }
-
-    &-icon {
-      margin-right: 20px;
-      width: 32px;
-      height: 38px;
+    &-title{
+      font-weight: 700;
+      color: $white;
     }
   }
-
-  &__tel {
-    display: flex;
-    align-items: center;
-    color: $white;
-
-    &-text {
-      color: $white;
-      font: 700 20px/30px $font;
-      letter-spacing: 0.46px;
-
-      &--br {
-        font: 400 16px/30px $font;
-      }
-    }
-
-    &-icon {
-      margin-right: 20px;
-      width: 32px;
-      height: 32px;
+  &__item {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 10px;
     }
   }
 }
-
-.our-com {
-  margin-left: 13%;
-
-  &__text {
-    color: $white;
-    font: 700 20px/30px $font;
-    letter-spacing: 0.46px;
-
-    &--br {
-      font: 400 16px/30px $font;
-    }
-  }
+.footer-address{
+  max-width: 180px;
+  font: 300 14px / 20px $font;
+  letter-spacing: 0.6px;
+  z-index: 3;
+  color:rgb(255, 255, 255)
 }
+
 
 @media (max-width: 970px) {
   .footer {

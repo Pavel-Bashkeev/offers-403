@@ -1,0 +1,78 @@
+.article{
+  .top{
+    background-image: url('../images/dest/pageArticles/top-bg.jpg');
+    &__container{
+      padding-top: 68px;
+      min-height: inherit;
+    }
+    &__title{
+      color: $white;
+      max-width: 689px;
+      font: 700 30px / 35px $font;
+      letter-spacing: 0.9px;
+    }
+    &__box{
+      position: absolute;
+      bottom: -75px;
+      left:50%;
+      transform: translateX(-50%);
+      max-width: 480px;
+    }
+  }
+}
+.article-content{
+  max-width: 770px;
+  padding-top: 112px;
+  padding-right: 7px;
+  padding-bottom: 58px;
+  &__paragraph{
+    color: $black;
+    font: 400 16px / 30px $font;
+    letter-spacing: 1px;
+    &:not(:last-child){
+      margin-bottom: 30px;
+    }
+  }
+}
+.articles-more{
+  padding: 67px 0 91px;
+  background-color: #f1f1f1;
+  &__title{
+    font: 700 30px / 35px $font;
+    margin-bottom: 60px;
+    color: $black;
+  }
+  &__items{
+    gap: 52px 60px;
+
+  }
+}
+@media (max-width: 480px) {
+  .article{
+    .top{
+      background-image: none;
+      min-height: auto;
+      &__container{
+        margin: 0 -15px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+
+      }
+      &__title{
+        order: 2;
+        color: $black;
+      }
+      &__box{
+        position: static;
+        transform: translateX(0);
+        left: 0;
+        bottom: 0;
+        margin-bottom: 53px;
+      }
+    }
+  }
+  .article-content {
+    padding-top: 30px;
+}
+}
