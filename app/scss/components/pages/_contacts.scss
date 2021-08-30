@@ -1,0 +1,14 @@
+.contacts{
+  .top{
+    background-image: url('../images/dest/pageContacts/top-bg.jpg');
+    &__container{
+      min-height: inherit;
+      align-items: center;
+      justify-content: center;
+    }
+    &__title{
+      margin-top: -150px;
+      margin-right: -480px;
+    }
+  }
+}

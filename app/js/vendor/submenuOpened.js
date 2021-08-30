@@ -9,11 +9,10 @@
     findHeight();
   }
   document.addEventListener('click', (event)=> {
-    // Деллигирование события
-    let target = event.target; //определяет по какому элементу был клик
-    let itMenu = target == submenu || submenu.contains(target); // если target равен самому меню или|| элементу находящийся в нутри меню то вернется TRUE
-    let itsBtnSubmenu = target == btnSubmenu || btnSubmenu.contains(target); //если target равен кнопки открывающая меню то вернется TRUE
-    let menuIsOpened = submenu.classList.contains('submenu--opened');// Если меню содержит класс "submenu--opened" то вернется TRUE
+    let target = event.target;
+    let itMenu = target == submenu || submenu.contains(target); 
+    let itsBtnSubmenu = target == btnSubmenu || btnSubmenu.contains(target);
+    let menuIsOpened = submenu.classList.contains('submenu--opened');
     itsBtnSubmenu ? openedSubmenu() : '';
     !itMenu && !itsBtnSubmenu && menuIsOpened ? closeSubmenu() : '';
   });
@@ -21,6 +20,7 @@
     if (submenu.classList.contains('submenu--opened')) {
       btnSubmenu.classList.remove('active-link');
       submenu.classList.remove('submenu--opened');
+      btnAncor.classList.remove('submenu__btn-flag--active')
       findHeight();
     }
   }
