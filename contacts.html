@@ -4,6 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta property="og:title" content="" />
 	<meta property="og:description"
 		content="" />
@@ -11,6 +13,7 @@
 	<meta property="og:type" content="website" />
 
 	<link rel="shortcut icon" href="images/dest/favicon.png" type="image/png">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/swiper.min.css">
 	<link rel="stylesheet" href="./css/style.min.css">
@@ -29,12 +32,12 @@
 			<nav class="menu ">
 				<ul class="menu__list df align-center">
 					<li class="menu__item menu-second">
-						<button class="btn-reset submenu__btn" aria-expanded="false">Categories <span
+						<button class="btn-reset submenu__btn" aria-expanded="false">Categories<span
 								class="submenu__btn-flag"></span></button>
 						<div class="submenu" aria-hidden='true'>
 							<div class="container  df">
 								<ul class="submenu__list">
-									<a href="joints.html" class="submenu__title submenu__link--active">Joint health</a>
+									<a href="joints.html" class="submenu__title">Joint health</a>
 									<li class="submenu__item">
 										<a href="fortuflex-balm.html" class="submenu__link">Fortuflex balm</a>
 									</li>
@@ -90,8 +93,8 @@
 					<li class="menu__item">
 						<a href="blog.html" class="menu__link">Blog</a>
 					</li>
-					<li class="menu__item">
-						<a href="contacts.html" class="menu__link">Contact us</a>
+          <li class="menu__item">
+						<a href="contacts.html" class="menu__link active-link">Contact us</a>
 					</li>
 				</ul>
 			</nav>
@@ -151,76 +154,24 @@
 			</div>
 		</div>
 	</header>
-	<main class="joints grow">
-		<div class="back-products">
-			<div class="container back-products__container">
-				<a href="all-products.html" class="back-products__link">Back to all products</a>
-			</div>
-		</div>
+	<main class="contacts">
 		<div class="top">
-			<div class="container top__container">
-				<h1 class="top__title">Joint health				</h1>
+			<div class="container top__container df dir-col">
+				<h1 class="top__title">Contact us</h1>
 			</div>
 		</div>
-		<h1 class="joints-title">
-			Take care of your joints to maintain their strength, flexibility and mobility. Start protecting your joints while you are young and stay active until old age. 
-		</h1>
-		<div class="categories categories-join">
-			
-			<div class="categories__items">
-				<div class="categories__item">
-					<div class="categories-box--img">
-						<img class="categories__img" src="./images/dest/mainPage/products/join/item-1.png" alt="">
-					</div>
-					<div class="prod-info">
-						<h4 class="prod-info__name">Fortuflex caps</h4>
-						<ul class="prod-info__list">
-							<li class="prod-info__list-item">Eliminate pain</li>
-							<li class="prod-info__list-item">Improve joint metabolism</li>
-							<li class="prod-info__list-item">Restore the bone and cartilage tissue</li>
-							<li class="prod-info__list-item">Restore joint function</li>
-						</ul>
-					</div>
-					<div class="categories-box">
-						<a href="fortuflex-caps.html" class="link--small">Show more</a>
-					</div>
-				</div>
-				<div class="categories__item">
-					<div class="categories-box--img">
-						<img class="categories__img" src="./images/dest/mainPage/products/join/item-2.png" alt="">
-					</div>
-					<div class="prod-info">
-						<h4 class="prod-info__name">Fortuflex balm</h4>
-						<ul class="prod-info__list">
-							<li class="prod-info__list-item">Releases join pain</li>
-							<li class="prod-info__list-item">Eliminates inflammation</li>
-							<li class="prod-info__list-item">Relieves muscle tension and spasms</li>
-							<li class="prod-info__list-item">Has double cooling and warming effect</li>
-						</ul>
-					</div>
-					<div class="categories-box">
-						<a href="fortuflex-balm.html" class="link--small">Show more</a>
-					</div>
-				</div>
-				<div class="categories__item">
-					<div class="categories-box--img">
-						<img class="categories__img" src="./images/dest/mainPage/products/join/item-3.png" alt="">
-					</div>
-					<div class="prod-info">
-						<h4 class="prod-info__name">Fortuflex patches</h4>
-						<ul class="prod-info__list">
-							<li class="prod-info__list-item">Eliminate aches in the joints</li>
-							<li class="prod-info__list-item">Have anti-edema and anti-inflammatory effects</li>
-							<li class="prod-info__list-item">Stimulate blood circulation in the affected joint area</li>
-							<li class="prod-info__list-item">Restore the motor activity of the joint</li>
-						</ul>
-					</div>
-					<div class="categories-box">
-						<a href="fortuflex-patches.html" class="link--small">Show more</a>
-					</div>
-				</div>
+		<h3 class="contacts__title tac">
+			If you want to contact us, please use the form below.
+		</h3>
+		<form action="" class="form mr-a fit" id="post" method="post">
+			<div class="form-inputs">
+				<input class="form__input" type="email" name="email" placeholder="e-mail">
+				<span class="form-inputs__delimiter">or</span>
+				<input class="form__input" type="tel" name="phone" placeholder="phone number">
 			</div>
-		</div>
+			<textarea class="form__message" name="message" placeholder="Request"></textarea>
+			<button class="form__btn btn-reset">Send</button>
+		</form>
 	</main>
 	<footer class="footer">
 		<div class="container footer__container">
