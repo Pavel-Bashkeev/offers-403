@@ -16,36 +16,19 @@
 	display: grid;
 }
 
-.gird-20g {
-	grid-template-columns: repeat(12, 1fr);
-	gap: 20px
-}
-
-.gird-30g {
-	grid-template-columns: repeat(12, 1fr);
-	gap: 30px
-}
-
-.grid-40g {
-	grid-template-columns: repeat(12, 1fr);
-	gap: 40px
-}
-
 //grid--------------------------------------------------------------------------------------------------
 // flex--------------------------------------------------------------------------------------------------
 .df {
 	display: flex;
 }
 
-.flex-column {
+.dir-col {
 	flex-direction: column;
 }
-
-.items-center {
+.items-center{
 	justify-content: center;
 	align-items: center;
 }
-
 .align-center {
 	align-items: center;
 }
@@ -69,20 +52,26 @@
 .grow {
 	flex-grow: 1;
 }
+
 .wrap {
 	flex-wrap: wrap;
 }
 
 // flex--------------------------------------------------------------------------------------------------
-.text-center{
+.tac {
 	text-align: center;
 }
-.fit{
+
+.fit {
 	width: fit-content;
 }
-.mr-a{
-	margin:0 auto;
+
+.mr-a {
+	margin: 0 auto;
 }
-.mr-c{
-	margin: auto;
+.pos-ab{
+	position: absolute;
+}
+.pos-rel{
+	position: relative;
 }
